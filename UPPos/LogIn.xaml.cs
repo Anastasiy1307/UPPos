@@ -16,14 +16,15 @@ using System.Windows.Shapes;
 namespace UPPos
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LogIn.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LogIn : Page
     {
-        public MainWindow()
+        public Frame frame1;
+        public LogIn(Frame frame)
         {
+            frame1 = frame;
             InitializeComponent();
-            MainFrame.Navigate(new LogIn(MainFrame));
         }
     }
 }
