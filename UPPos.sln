@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPPos", "UPPos\UPPos.csproj", "{580A6DF4-D09C-425B-81AF-50FEA172BCC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{580A6DF4-D09C-425B-81AF-50FEA172BCC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580A6DF4-D09C-425B-81AF-50FEA172BCC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580A6DF4-D09C-425B-81AF-50FEA172BCC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580A6DF4-D09C-425B-81AF-50FEA172BCC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4126E20C-5BD3-4514-9147-639505A6FD65}
+	EndGlobalSection
+EndGlobal
