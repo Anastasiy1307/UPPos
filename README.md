@@ -5,3 +5,8 @@
 ![image](https://user-images.githubusercontent.com/100847962/222152587-7e609e2d-16e6-456f-acc1-e0966c659722.png)
 ### Импорт данных из таблицы Exel в таблицу Service
 ![image](https://user-images.githubusercontent.com/100847962/222152825-0d32629c-6d6c-47fb-9af5-42eaf2496a1a.png)
+### Макет страниц
+#### Страница авторизации
+![image](https://user-images.githubusercontent.com/100847962/222727939-72041770-52bf-4a4c-ab4c-9e81469b4368.png)
+#### Страница Регистрации
+![image](https://user-images.githubusercontent.com/100847962/222729256-0412d572-7608-4d8e-b595-4a53d4d5aa8d.png)
