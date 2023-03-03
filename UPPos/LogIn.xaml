@@ -169,6 +169,7 @@
                    Foreground="#7AA7D2"
                    FontSize="30" Margin="437,602,0,56" 
                    FontFamily="Bahnschrift" 
+                   MouseLeftButtonDown="Reg_MouseLeftButtonDown"
                    Cursor="Hand" 
                    />
         <TextBlock Text="или"

@@ -26,5 +26,9 @@ namespace UPPos
             frame1 = frame;
             InitializeComponent();
         }
+        private void Reg_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new Registration(frame1));
+        }
     }
 }

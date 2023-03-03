@@ -20,9 +20,11 @@ namespace UPPos
     /// </summary>
     public partial class Registration : Page
     {
-        public Registration()
+        public Frame frame1;
+        public Registration(Frame frame)
         {
             InitializeComponent();
+            frame1 = frame;
         }
     }
 }
