@@ -11,3 +11,5 @@
 ![image](https://user-images.githubusercontent.com/100847962/222727939-72041770-52bf-4a4c-ab4c-9e81469b4368.png)
 ### Страница Регистрации
 ![image](https://user-images.githubusercontent.com/100847962/222729256-0412d572-7608-4d8e-b595-4a53d4d5aa8d.png)
+### Главная страница
+![image](https://user-images.githubusercontent.com/100847962/222902065-821c3e62-618d-435a-8ad6-8403a8df2628.png)
