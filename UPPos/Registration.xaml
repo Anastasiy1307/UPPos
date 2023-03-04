@@ -134,6 +134,7 @@
                    FontSize="50" 
                    Margin="0,499,0,135" 
                    FontFamily="Bahnschrift" 
+                   MouseLeftButtonDown="Regis_MouseLeftButtonDown"
                    Cursor="Hand" 
                    />
         <TextBlock x:Name="back" 
@@ -149,7 +150,7 @@
                    FontSize="25" 
                    Margin="940,620,0,50" 
                    FontFamily="Bahnschrift" 
-                
+                MouseLeftButtonDown="Back_MouseLeftButtonDown"
                    Cursor="Hand"/>
         <TextBox x:Name="password_Copy" 
                  Style="{DynamicResource TextBoxStyle1}" 
