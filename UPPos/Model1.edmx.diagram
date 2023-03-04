@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a41bb6fa1ebb42dc8cbd48d1b821ae60" Name="Diagram1">
+        <EntityTypeShape EntityType="YP_0101Model.Employee" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YP_0101Model.Results" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="YP_0101Model.Service" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YP_0101Model.sysdiagrams" Width="1.5" PointX="14.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YP_0101Model.Users" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="YP_0101Model.FK_Results_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="YP_0101Model.FK_Results_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="YP_0101Model.FK_Results_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
