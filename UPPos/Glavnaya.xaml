@@ -60,6 +60,7 @@
                            TextDecorations="Underline"
                            Foreground="White" 
                            Cursor="Hand" 
+                           Margin="20,0,0,0"
                            MouseLeftButtonDown="Back_MouseLeftButtonDown"
                            Width="78" RenderTransformOrigin="1.032,0.655"/>
             </StackPanel>
