@@ -148,7 +148,7 @@
                    FontWeight="Bold" 
                    Foreground="#7AA7D2" 
                    FontSize="25" 
-                   Margin="940,620,0,50" 
+                   Margin="43,618,0,52" 
                    FontFamily="Bahnschrift" 
                 MouseLeftButtonDown="Back_MouseLeftButtonDown"
                    Cursor="Hand"/>

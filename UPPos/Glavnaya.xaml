@@ -1,0 +1,78 @@
+﻿<Page x:Class="UPPos.Glavnaya"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UPPos"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="Glavnaya">
+
+    <Grid Height="700" Width="1200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="301*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Orientation="Horizontal" 
+                  HorizontalAlignment="Left"
+                  
+                   Width="1200" Background="#7AA7D2" RenderTransformOrigin="0.499,0.48" Margin="0,0,0,675" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Width="309">
+                <TextBlock Text="Поиск: " 
+                           Width="74" TextAlignment="Center" 
+                           Foreground="White"
+                           FontStyle="Normal"
+                           FontFamily="Bahnschrift" FontSize="20" RenderTransformOrigin="0.847,0.562" 
+                           />
+                <TextBox Width="225"
+                         x:Name="TBoxSearch"
+                         FontSize="15"
+                        
+                         Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Сортировка: "
+                           Foreground="White"
+                           Width="131"
+                           FontFamily="Bahnschrift"
+                           TextAlignment="Right" FontSize="20"/>
+                <ComboBox Width="271"
+                          x:Name="ComboType"
+                        
+                          DisplayMemberPath="Title"/>
+                <TextBlock Text="Фильтрация: "
+                    Foreground="White"
+                    Width="132"
+                    FontFamily="Bahnschrift"
+                    TextAlignment="Right" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ComboBox Width="251"
+                    x:Name="ComboType_Copy"
+                   
+                    DisplayMemberPath="Title"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Back"
+                           Text="Выход"
+                           FontFamily="Bahnschrift"
+                           FontSize="20" 
+                           FontWeight="Bold" 
+                           TextDecorations="Underline"
+                           Foreground="White" 
+                           Cursor="Hand" 
+                           MouseLeftButtonDown="Back_MouseLeftButtonDown"
+                           Width="78" RenderTransformOrigin="1.032,0.655"/>
+            </StackPanel>
+
+        </WrapPanel>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Height="591" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,24,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Page>

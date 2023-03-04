@@ -146,7 +146,7 @@
                    Foreground="#7AA7D2"
                    FontSize="50" Margin="0,387,0,247" 
                    FontFamily="Bahnschrift" 
-
+                   MouseLeftButtonDown="LogIn_MouseLeftButtonDown"
                    Cursor="Hand"/>
 
         <TextBlock Text="Впервые? Вы можете" 
@@ -156,7 +156,7 @@
                    Width="315"
                    Foreground="#7AA7D2"
                    FontSize="30" 
-                   Margin="117,602,0,56" 
+                   Margin="117,526,0,132" 
                    FontFamily="Bahnschrift"/>
         <TextBlock x:Name="Reg"
                    Text="Зарегистрироваться"
@@ -167,7 +167,7 @@
                    Width="299"
                    FontWeight="Bold" 
                    Foreground="#7AA7D2"
-                   FontSize="30" Margin="437,602,0,56" 
+                   FontSize="30" Margin="437,526,0,132" 
                    FontFamily="Bahnschrift" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"
                    Cursor="Hand" 
@@ -179,7 +179,7 @@
                    Width="90"
                    Foreground="#7AA7D2"
                    FontSize="30" 
-                   Margin="741,602,0,56" 
+                   Margin="741,526,0,132" 
                    FontFamily="Bahnschrift"/>
         <TextBlock x:Name="Gues"
                    Text="Войти как гость"
@@ -191,8 +191,9 @@
                    FontWeight="Bold" 
                    Foreground="#7AA7D2"
                    FontSize="30" 
-                   Margin="836,602,0,56" 
+                   Margin="836,526,0,132" 
                    FontFamily="Bahnschrift" 
+                    MouseLeftButtonDown="Gues_MouseLeftButtonDown"
                    Cursor="Hand" />
     </Grid>
 </Page>

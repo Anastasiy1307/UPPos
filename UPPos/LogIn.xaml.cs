@@ -30,5 +30,13 @@ namespace UPPos
         {
             frame1.Navigate(new Registration(frame1));
         }
+        private void LogIn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new Glavnaya(frame1));
+        }
+        private void Gues_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new Glavnaya(frame1));
+        }
     }
 }
