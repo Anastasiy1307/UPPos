@@ -21,12 +21,15 @@ namespace UPPos
     public partial class Glavnaya : Page
     {
         public Frame frame1;
-        public Glavnaya(Frame frame, string user)
+        string User;
+        string Workers;
+        public Glavnaya(string log, Frame frame)
         {
             frame1 = frame;
             InitializeComponent();
             frame1 = frame;
-            User = user;
+            User = log;
+            Workers = log;
         }
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
