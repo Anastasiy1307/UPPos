@@ -155,7 +155,7 @@
                    Foreground="#7AA7D2"
                    FontSize="50" Margin="0,387,0,247" 
                    FontFamily="Bahnschrift" 
-                   MouseLeftButtonDown="LogIn_MouseLeftButtonDown"
+                   MouseLeftButtonDown="Avtoriz_Vxod"
                    Cursor="Hand"/>
 
         <TextBlock Text="Впервые? Вы можете" 
@@ -179,8 +179,7 @@
                    FontSize="30" Margin="598,526,0,132" 
                    FontFamily="Bahnschrift" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"
-                   Cursor="Hand" 
-                   />
+                   Cursor="Hand"/>
         <Image HorizontalAlignment="Left"
                Height="51"
                Margin="876,302,0,0"
