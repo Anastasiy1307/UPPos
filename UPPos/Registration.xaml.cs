@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -37,7 +38,7 @@ namespace UPPos
                 {
                     if (pas == pas1)
                     {
-                        List<UP.Users> user = new List<UP.Users>() { new Users() };
+                        List<UPPos.Users> user = new List<UPPos.Users>() { new Users() };
                         List<History> h = new List<History>() { new History() };
                         int count = Entities1.GetContex().Users.Count();
                         int count_h = Entities1.GetContex().History.Count();
