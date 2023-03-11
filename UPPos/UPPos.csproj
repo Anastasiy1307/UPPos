@@ -70,6 +70,7 @@
     <Compile Include="Capcha.xaml.cs">
       <DependentUpon>Capcha.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class\Navig.cs" />
     <Compile Include="DataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
