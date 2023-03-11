@@ -23,6 +23,7 @@ namespace UPPos
     {
         public Frame frame1;    
         public int vx = 0;
+        int error = 0;
         DateTime date;
         public LogIn(Frame frame)
         {
@@ -44,6 +45,7 @@ namespace UPPos
 
         public void vxod()
         {
+          
             string log = login.Text;
             string pas = password.Password;
             int count = Entities1.GetContex().Users.Count();
@@ -53,6 +55,53 @@ namespace UPPos
             int count_hh = Entities1.GetContex().History.Count();
             history = Entities1.GetContex().History.ToList();
             for (int i = 0; i < count; i++)
+            {
+                if (users[i].login == log)
+                {
+                    if (users[i].password == pas)
+                    {
+                        for (int j = count_hh - 1; j >= 0; j--)
+                        {
+                            if (history[j].login == log)
+                            {
+                                DateTime t = DateTime.Now;
+                                if (history[j].Block != null)
+                                {
+                                    t = (DateTime)history[j].Block;
+                                    t = t.AddMinutes(30);
+                                }
+                                if (DateTime.Now < history[j].Block || t <= DateTime.Now)
+                                {
+                                    vx = 1;
+                                    int count_h = Entities1.GetContex().History.Count();
+                                    history_login[0].login = log;
+                                    history_login[0].dataZ = DateTime.Now;
+                                    history_login[0].ip = Dns.GetHostName();
+                                    if (history[j].Block < DateTime.Now)
+                                    {
+                                        history_login[0].Block = date.AddHours(2.5);
+                                    }
+                                    else
+                                    {
+                                        history_login[0].Block = history[j].Block;
+                                    }
+                                    Entities1.GetContex().History.Add(history_login[0]);
+                                    Entities1.GetContex().SaveChanges();
+                                    frame1.Navigate(new Glavnaya(users[i].login, frame1));
+                                    break;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Перерыв пол часа");
+                                    vx = 1;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < count1; i++)
             {
                 if (workers[i].login == log)
                 {
@@ -87,6 +136,7 @@ namespace UPPos
                                     Entities1.GetContex().History.Add(history_login[0]);
                                     Entities1.GetContex().SaveChanges();
                                     frame1.Navigate(new Glavnaya(workers[i].login, frame1));
+                                    vx = 1;
                                     break;
                                 }
                                 else
@@ -100,54 +150,7 @@ namespace UPPos
                     }
                 }
             }
-            for (int i = 0; i < count; i++)
-            {
-                if (users[i].login == log)
-                {
-                    if (users[i].password == pas)
-                    {
-                        for (int j = count_hh - 1; j >= 0; j--)
-                        {
-                            if (history[j].login == log)
-                            {
-                                DateTime t = DateTime.Now;
-                                if (history[j].Block != null)
-                                {
-                                    t = (DateTime)history[j].Block;
-                                    t = t.AddMinutes(30);
-                                }
-                                if (DateTime.Now < history[j].Block || t <= DateTime.Now)
-                                {
-                                    vx = 1;
-                                    int count_h = Entities1.GetContex().History.Count();
-                                    history_login[0].id = count_h + 1;
-                                    history_login[0].login = log;
-                                    history_login[0].dataZ = DateTime.Now;
-                                    history_login[0].ip = Dns.GetHostName();
-                                    if (history[j].Block < DateTime.Now)
-                                    {
-                                        history_login[0].Block = date.AddHours(2.5);
-                                    }
-                                    else
-                                    {
-                                        history_login[0].Block = history[j].Block;
-                                    }
-                                    Entities1.GetContex().History.Add(history_login[0]);
-                                    Entities1.GetContex().SaveChanges();
-                                    frame1.Navigate(new Glavnaya(users[i].login, frame1));
-                                    break;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Перерыв пол часа");
-                                    vx = 1;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
             if (vx == 0)
             {
                 MessageBox.Show("Неверный логин или пароль");
@@ -170,7 +173,7 @@ namespace UPPos
 
         }
 
-        int error = 0;
+       
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             nevisu.Visibility = Visibility.Hidden;
