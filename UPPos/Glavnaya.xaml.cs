@@ -31,6 +31,7 @@ namespace UPPos
         string Workers;
         Navig sp = new Navig();
         List<Service> List_Service = new List<Service>();
+        List<Results> List_Result = new List<Results>();
         List<Users> users = new List<Users>();
         List<Workers> workers = new List<Workers>();
         List<History> historys = new List<History>();
@@ -39,7 +40,6 @@ namespace UPPos
         {
             frame1 = frame;
             InitializeComponent();
-            frame1 = frame;
             User = log;
             Workers = log;
             int count_hh = Entities1.GetContex().History.Count();
@@ -78,6 +78,18 @@ namespace UPPos
                     //Image.Visibility = Visibility.Hidden;
                 }
             }
+            //Вывод таблицы Сервис
+            List_Service = Entities1.GetContex().Service.ToList();
+            int countS = Entities1.GetContex().Service.Count();
+            sp.CountPageFlower = 3;
+            sp.CountlistFlower = countS;
+            LViewServ.ItemsSource = List_Service.Skip(0).Take(sp.CountPagesFlower).ToList();
+            //Вывод таблицы 
+            List_Result = Entities1.GetContex().Results.ToList();
+            int countR = Entities1.GetContex().Results.Count();
+            sp.CountPageFlower = 3;
+            sp.CountlistFlower = countR;
+            LViewResult.ItemsSource = List_Service.Skip(0).Take(sp.CountPagesFlower).ToList();
         }
 
         public int TickCounter
@@ -127,6 +139,23 @@ namespace UPPos
         private void Time_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Service_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Service.Visibility = Visibility.Hidden;
+            Result.Visibility = Visibility.Visible;
+            LViewServ.Visibility = Visibility.Hidden;
+            LViewResult.Visibility = Visibility.Visible;
+
+        }
+
+        private void Result_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Result.Visibility = Visibility.Hidden;
+            Service.Visibility = Visibility.Visible;
+            LViewResult.Visibility = Visibility.Hidden;
+            LViewServ.Visibility = Visibility.Visible;
         }
     }
 }

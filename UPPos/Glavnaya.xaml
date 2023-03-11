@@ -67,10 +67,70 @@
 
         </WrapPanel>
         <ListView
-                  x:Name="LViewTours"
-                  ItemsSource="{Binding Service}" 
+                  x:Name="LViewServ"
+                  ItemsSource="{Binding Source = Service}" 
                   Margin="0,25,0,105"
                   Visibility="Visible"
+                  Cursor="Hand" Grid.ColumnSpan="2">
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid 
+                          Cursor="Hand">
+                        <Border BorderThickness="1" 
+                            BorderBrush="Black" 
+                            CornerRadius="5">
+
+                            <Grid Margin="0" 
+                              HorizontalAlignment="Stretch">
+                                <Grid.ToolTip>
+                                    <ToolTip>
+                                        Перейти
+                                    </ToolTip>
+                                </Grid.ToolTip>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="1"
+                                        Margin="15"
+                                        Orientation="Horizontal">
+                                    <Image Source="/Image/zagl.jpg"
+                                       Height="100" Width="160"
+                                       HorizontalAlignment="Left"/>
+                                    <StackPanel Grid.Column="1"
+                                            Margin="0"
+                                            Orientation="Vertical">
+                                        <TextBlock Text="{Binding service1}"
+                                               Name="Ser"
+                                               FontFamily="Monotype Corsiva"
+                                               FontSize="30"/>
+                                        <TextBlock Text="{Binding price}"
+                                               FontFamily="Monotype Corsiva"
+                                               FontSize="30"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView
+                  x:Name="LViewResult"
+                  ItemsSource="{Binding Service}" 
+                  Margin="0,25,0,105"
+                  Visibility="Hidden"
                   Cursor="Hand" Grid.ColumnSpan="2">
 
             <ListView.ItemContainerStyle>
@@ -142,7 +202,31 @@
                  BorderBrush="{x:Null}"
                  Background="{x:Null}"
                  SelectionBrush="{x:Null}" Width="56" IsEnabled="False"/>
-        <Label Content="Осталось времени" HorizontalAlignment="Left" Margin="930,610,0,0" VerticalAlignment="Top" FontSize="20" Height="36" Foreground="#FF7AA7D2"/>
+        <Label Content="Осталось времени"
+               HorizontalAlignment="Left"
+               Margin="930,610,0,0"
+               VerticalAlignment="Top"
+               FontSize="20"
+               Height="36"
+               Foreground="#FF7AA7D2"/>
+        <Image x:Name="Result"
+               Source="/Pictures/Приёмы.png"
+               HorizontalAlignment="Left" 
+               Height="54" 
+               Margin="10,599,0,0"
+               VerticalAlignment="Top"
+               Width="54"
+               Visibility="Visible"
+               MouseLeftButtonDown="Result_MouseLeftButtonDown"/>
+        <Image x:Name="Service"
+               Source="/Pictures/Услуги.png"
+               HorizontalAlignment="Left" 
+               Height="54" 
+               Margin="10,599,0,0"
+               VerticalAlignment="Top"
+               Width="54"
+               Visibility="Hidden"
+               MouseLeftButtonDown="Service_MouseLeftButtonDown"/>
 
 
     </Grid>
