@@ -12,19 +12,24 @@ namespace UPPos
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee
+    public partial class Workers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employee()
+        public Workers()
         {
             this.Results = new HashSet<Results>();
         }
     
-        public int ID { get; set; }
-        public string Login { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string login { get; set; }
         public string password { get; set; }
-        public string Dolgn { get; set; }
+        public string ip { get; set; }
+        public string lastenter { get; set; }
+        public int id_dolgnost { get; set; }
+        public string analyzator { get; set; }
     
+        public virtual Dolgnosti Dolgnosti { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Results> Results { get; set; }
     }

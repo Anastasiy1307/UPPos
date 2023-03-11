@@ -13,22 +13,31 @@ namespace UPPos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class YP_0101Entities : DbContext
+    public partial class Entities1 : DbContext
     {
-        public YP_0101Entities()
-            : base("name=YP_0101Entities")
+        private static Entities1 _instance;
+        public Entities1()
+            : base("name=Entities1")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
-        public virtual DbSet<Employee> Employee { get; set; }
+
+        public static Entities1 GetContex()
+        {
+            if (_instance == null) _instance = new Entities1();
+            return _instance;
+        }
+
+        public virtual DbSet<Dolgnosti> Dolgnosti { get; set; }
+        public virtual DbSet<History> History { get; set; }
         public virtual DbSet<Results> Results { get; set; }
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Workers> Workers { get; set; }
     }
 }

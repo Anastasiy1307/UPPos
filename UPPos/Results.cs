@@ -16,13 +16,13 @@ namespace UPPos
     {
         public int id { get; set; }
         public Nullable<int> id_user { get; set; }
-        public Nullable<int> id_lab { get; set; }
+        public Nullable<int> id_work { get; set; }
         public Nullable<int> id_service { get; set; }
         public string result { get; set; }
         public string data { get; set; }
     
-        public virtual Employee Employee { get; set; }
         public virtual Service Service { get; set; }
         public virtual Users Users { get; set; }
+        public virtual Workers Workers { get; set; }
     }
 }

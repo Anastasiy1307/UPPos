@@ -134,6 +134,15 @@
                      Width="520" 
                      Margin="0,296,0,344" 
                      FontSize="40" />
+        <TextBox Style="{DynamicResource TextBoxStyle1}" 
+                 x:Name="pwdVisu" 
+                 TextWrapping="Wrap" 
+                 Height="60"
+                 Width="520" 
+                 Margin="0,296,0,344"
+                 FontSize="40" 
+                 TextAlignment="Left" FontFamily="Comic Sans MS"
+                 Visibility="Hidden"/>
 
         <TextBlock x:Name="Entre"
                    Text="Вход" 
@@ -195,5 +204,22 @@
                    FontFamily="Bahnschrift" 
                     MouseLeftButtonDown="Gues_MouseLeftButtonDown"
                    Cursor="Hand" />
+        <Image HorizontalAlignment="Left"
+               Height="51"
+               Margin="876,302,0,0"
+               VerticalAlignment="Top"
+               Width="48"
+               Source="/Pictures/Open.png"
+               Visibility="Hidden"
+               MouseLeftButtonDown="Visu_MouseLeftButtonDown"
+               x:Name="Visu"/>
+        <Image HorizontalAlignment="Left"
+               Height="51"
+               Margin="876,302,0,0"
+               VerticalAlignment="Top"
+               Width="48"
+               Source="/Pictures/Close.png"
+               MouseLeftButtonDown="Image_MouseLeftButtonDown"
+               x:Name="nevisu"/>
     </Grid>
 </Page>

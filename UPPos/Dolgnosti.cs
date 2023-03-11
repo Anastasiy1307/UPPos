@@ -12,23 +12,18 @@ namespace UPPos
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Dolgnosti
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public Dolgnosti()
         {
-            this.Results = new HashSet<Results>();
+            this.Workers = new HashSet<Workers>();
         }
     
         public int id { get; set; }
-        public string name { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
-        public string ip { get; set; }
-        public Nullable<System.DateTime> latenter { get; set; }
-        public Nullable<int> id_history { get; set; }
+        public string dolgnost { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Results> Results { get; set; }
+        public virtual ICollection<Workers> Workers { get; set; }
     }
 }

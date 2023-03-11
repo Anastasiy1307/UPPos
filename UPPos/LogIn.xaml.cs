@@ -38,5 +38,22 @@ namespace UPPos
         {
             frame1.Navigate(new Glavnaya(frame1));
         }
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            nevisu.Visibility = Visibility.Hidden;
+            Visu.Visibility = Visibility.Visible;
+            pwdVisu.Text = password.Password; // скопируем в TextBox из PasswordBox
+            pwdVisu.Visibility = Visibility.Visible; // TextBox - отобразить
+            password.Visibility = Visibility.Hidden; // PasswordBox - скрыть
+        }
+
+        private void Visu_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            nevisu.Visibility = Visibility.Visible;
+            Visu.Visibility = Visibility.Hidden;
+            password.Password = pwdVisu.Text; // скопируем в PasswordBox из TextBox 
+            pwdVisu.Visibility = Visibility.Hidden; // TextBox - скрыть
+            password.Visibility = Visibility.Visible; // PasswordBox - отобразить
+        }
     }
 }
