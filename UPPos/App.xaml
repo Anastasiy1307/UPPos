@@ -93,11 +93,11 @@
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="#FF498C51"/>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FF7AA7D2"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#00707070"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FF76E383"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#5B8EC2"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#003C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF76E383"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#5B8EC2"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#003C7FB1"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#003C7FB1"/>
