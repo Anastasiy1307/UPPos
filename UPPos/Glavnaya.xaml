@@ -67,7 +67,7 @@
                   ItemsSource="{Binding Source = Service}" 
                   Margin="0,25,0,106"
                   Visibility="Visible"
-                  Cursor="Hand">
+                  Cursor="Hand" MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -122,7 +122,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Margin="814,611,284,51" Visibility="Hidden" x:Name="Str">
+        <Grid Margin="496,603,496,59" Visibility="Hidden" x:Name="Str">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Name="txtPrev1" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev1" Text="&lt;&lt;" MouseLeftButtonDown="Glavnaya_GoPage"></TextBlock>
                 <TextBlock Name="txtPrev" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev" Text=" &lt;" MouseLeftButtonDown="Glavnaya_GoPage"/>
@@ -195,7 +195,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Margin="814,611,284,51" Visibility="Hidden" x:Name="Str2">
+        <Grid Margin="496,603,496,59" Visibility="Hidden" x:Name="Str2">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Name="txtPrev12" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev1" Text="&lt;&lt;" Foreground="#FF7AA7D2"></TextBlock>
                 <TextBlock Name="txtPrev2" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev" Text=" &lt;" Foreground="#FF7AA7D2"/>
@@ -249,6 +249,11 @@
                Width="54"
                Visibility="Hidden"
                MouseLeftButtonDown="Service_MouseLeftButtonDown"/>
+        <Image x:Name="Add"
+               Source="/Pictures/Add.png"
+               Height="54" 
+               Width="54"
+               Margin="89,595,1057,51" MouseLeftButtonDown="Add_MouseLeftButtonDown"/>
 
 
     </Grid>

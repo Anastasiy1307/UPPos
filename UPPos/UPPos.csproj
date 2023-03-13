@@ -67,6 +67,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddResult.xaml.cs">
+      <DependentUpon>AddResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddServ.xaml.cs">
+      <DependentUpon>AddServ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Capcha.xaml.cs">
       <DependentUpon>Capcha.xaml</DependentUpon>
     </Compile>
@@ -107,12 +113,23 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="UpdServ.xaml.cs">
+      <DependentUpon>UpdServ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Workers.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
+    <Page Include="AddResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddServ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Capcha.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +158,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdServ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +220,7 @@
       <DependentUpon>DataBase.edmx</DependentUpon>
       <LastGenOutput>DataBase.cs</LastGenOutput>
     </Content>
+    <Resource Include="Pictures\add.png" />
     <Resource Include="logo.ico" />
     <Resource Include="Pictures\Услуги.png" />
     <Resource Include="Pictures\Приёмы.png" />

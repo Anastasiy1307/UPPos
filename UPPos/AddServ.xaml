@@ -1,0 +1,70 @@
+﻿<Page x:Class="UPPos.AddServ"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UPPos"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="AddServ">
+
+    <Grid>
+        <Label Content="Название сервиса"
+               FontSize="40"
+               FontFamily="Comic Sans MS"
+               Height="76"
+               Foreground="White" Margin="0,67,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="360" />
+        <TextBox x:Name="NameServAdd" 
+                 Style="{DynamicResource TextBoxStyle1}" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,148,0,0" 
+                 TextWrapping="Wrap" 
+                 FontFamily="Comic Sans MS"
+                 Height="60" 
+                 Width="520" 
+                 FontSize="40" 
+                 VerticalAlignment="Top" 
+                 TextAlignment="Center" />
+
+        <Label Content="Цена"
+               FontSize="40"
+               FontFamily="Comic Sans MS"
+               Height="67"
+               Foreground="White" Margin="0,296,0,0" HorizontalAlignment="Center" Width="114" VerticalAlignment="Top"
+               />
+        <TextBox x:Name="PriceServAdd" 
+                 Style="{DynamicResource TextBoxStyle1}" 
+                 HorizontalAlignment="Center" 
+                 TextWrapping="Wrap" 
+                 FontFamily="Comic Sans MS"
+                 Height="60" 
+                 Width="520" 
+                 FontSize="40" 
+                 VerticalAlignment="Top" 
+                 TextAlignment="Center" Margin="0,368,0,0" />
+
+        <TextBlock x:Name="AddSBut"
+                   Text="Добавить"
+                   FontSize="50" 
+                   Foreground="White"
+                   FontFamily="Comic Sans MS"
+                   TextDecorations="Underline" 
+                   MouseLeftButtonDown="AddSBut_MouseLeftButtonDown" 
+                   Margin="0,544,0,0" 
+                   HorizontalAlignment="Center" 
+                   Width="238" 
+                   Height="92" 
+                   VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="BackSBut"
+                   Text="Назад"
+                   FontSize="35" 
+                   Foreground="White"
+                   FontFamily="Comic Sans MS"
+                   TextDecorations="Underline" 
+                   Margin="1078,10,10,622" 
+                   MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
+
+
+    </Grid>
+</Page>

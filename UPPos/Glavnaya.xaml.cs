@@ -29,6 +29,7 @@ namespace UPPos
         public Frame frame1;
         string User;
         string Workers;
+        object Item;
         Navig sp = new Navig();
         List<Service> List_Service = new List<Service>();
         List<Results> List_Result = new List<Results>();
@@ -36,12 +37,13 @@ namespace UPPos
         List<Workers> workers = new List<Workers>();
         List<History> historys = new List<History>();
         int kolvo_zapice = 3;
-        public Glavnaya(string log, Frame frame)
+        public Glavnaya(string log, Frame frame, object item)
         {
             frame1 = frame;
             InitializeComponent();
             User = log;
             Workers = log;
+            Item = item;
             int count_hh = Entities1.GetContex().History.Count();
             historys = Entities1.GetContex().History.ToList();
             int time = 0;
@@ -247,6 +249,16 @@ namespace UPPos
                     break;
             }
             LViewServ.ItemsSource = List_Service.Skip(sp.CurrentPage * sp.CountPageFlower - sp.CountPageFlower).Take(sp.CountPageFlower).ToList();
+        }
+
+        private void Add_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new AddServ(User,frame1, Item));
+        }
+
+        private void LViewServ_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new UpdServ(User, frame1, Item));
         }
     }
 }

@@ -21,7 +21,8 @@ namespace UPPos
     /// </summary>
     public partial class LogIn : Page
     {
-        public Frame frame1;    
+        public Frame frame1;
+        object Item;
         public int vx = 0;
         int error = 0;
         DateTime date;
@@ -87,7 +88,7 @@ namespace UPPos
                                     }
                                     Entities1.GetContex().History.Add(history_login[0]);
                                     Entities1.GetContex().SaveChanges();
-                                    frame1.Navigate(new Glavnaya(users[i].login, frame1));
+                                    frame1.Navigate(new Glavnaya(users[i].login, frame1, Item));
                                     break;
                                 }
                                 else
@@ -135,7 +136,7 @@ namespace UPPos
                                     }
                                     Entities1.GetContex().History.Add(history_login[0]);
                                     Entities1.GetContex().SaveChanges();
-                                    frame1.Navigate(new Glavnaya(workers[i].login, frame1));
+                                    frame1.Navigate(new Glavnaya(workers[i].login, frame1, Item));
                                     vx = 1;
                                     break;
                                 }
