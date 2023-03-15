@@ -123,7 +123,7 @@
                FontSize="40"
                Height="60"
                HorizontalAlignment="Center"
-               Width="150" 
+               Width="159" 
                Margin="0,236,0,404"
                Foreground="#7AA7D2" 
                FontFamily="Comic Sans MS"/>
