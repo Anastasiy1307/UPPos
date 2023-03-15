@@ -20,13 +20,13 @@ namespace UPPos
     /// </summary>
     public partial class UpdServ : Page
     {
-        public Frame frame;
+        public Frame frame1;
         string Log;
         object Item;
         List<Service> List_Services = new List<Service>() { new Service() };
         public UpdServ(string log,Frame frame1, object item)
         {
-            frame = frame1;
+            frame1 = frame1;
             Log = log;
             Item = item;
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace UPPos
                     {
                         List_Services[i].price = price;
                         Entities1.GetContex().SaveChanges();
-                        frame.Navigate(new Glavnaya(Log, frame, Item));
+                        frame1.Navigate(new Glavnaya(Log, frame1, Item));
                     }
                     else
                     {
@@ -64,7 +64,6 @@ namespace UPPos
         private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
-            frame.Navigate(new Glavnaya(Log, frame, Item));
         }
     }
 }

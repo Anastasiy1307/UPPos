@@ -64,9 +64,10 @@
         </WrapPanel>
         <ListView
                   x:Name="LViewServ"
-                  ItemsSource="{Binding Service}" 
+                  ItemsSource="{Binding Source = Service}" 
                   Margin="0,25,0,106"
-                  Visibility="Visible">
+                  Visibility="Visible"
+                  Cursor="Hand" MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -75,9 +76,10 @@
                 </Style>
             </ListView.ItemContainerStyle>
 
-            <ListView.ItemTemplate >
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Cursor="Hand">
+                    <Grid 
+                          Cursor="Hand">
                         <Border BorderThickness="1" 
                             BorderBrush="Black" 
                             CornerRadius="5">
@@ -149,15 +151,14 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Cursor="Hand">
-                        
+                    <Grid 
+                          Cursor="Hand">
                         <Border BorderThickness="1" 
-                                BorderBrush="Black" 
-                                CornerRadius="5">
+                            BorderBrush="Black" 
+                            CornerRadius="5">
 
                             <Grid Margin="0" 
-                                  HorizontalAlignment="Stretch">
-                                
+                              HorizontalAlignment="Stretch">
                                 <Grid.ToolTip>
                                     <ToolTip>
                                         Перейти
@@ -179,20 +180,11 @@
                                     <StackPanel Grid.Column="1"
                                             Margin="0"
                                             Orientation="Vertical">
-                                        <TextBlock Text="{Binding id_user}"
+                                        <TextBlock Text="{Binding service1}"
                                                Name="Ser"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
-                                        <TextBlock Text="{Binding id_work}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
-                                        <TextBlock Text="{Binding id_service}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
-                                        <TextBlock Text="{Binding result}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
-                                        <TextBlock Text="{Binding data}"
+                                        <TextBlock Text="{Binding price}"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                     </StackPanel>

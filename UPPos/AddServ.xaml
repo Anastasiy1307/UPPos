@@ -50,19 +50,20 @@
                    FontFamily="Comic Sans MS"
                    TextDecorations="Underline" 
                    MouseLeftButtonDown="AddSBut_MouseLeftButtonDown" 
-                   Margin="0,530,0,0" 
+                   Margin="0,544,0,0" 
                    HorizontalAlignment="Center" 
                    Width="238" 
                    Height="92" 
                    VerticalAlignment="Top"/>
+
         <TextBlock x:Name="BackSBut"
-            Text="Назад"
-            FontSize="35" 
-            Foreground="White"
-            FontFamily="Comic Sans MS"
-            TextDecorations="Underline" 
-            Margin="1053,10,-30,575" 
-            MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
+                   Text="Назад"
+                   FontSize="35" 
+                   Foreground="White"
+                   FontFamily="Comic Sans MS"
+                   TextDecorations="Underline" 
+                   Margin="1078,10,10,622" 
+                   MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
 
 
     </Grid>
