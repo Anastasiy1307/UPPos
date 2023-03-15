@@ -8,49 +8,59 @@
       d:DesignHeight="700" d:DesignWidth="1200"
       Title="Glavnaya">
 
-    <Grid Height="700" Width="1200">
+    <Grid Height="700" 
+          Width="1200">
         <WrapPanel Orientation="Horizontal" 
                   HorizontalAlignment="Center"
-                  
-                   Width="1200" Background="#7AA7D2" RenderTransformOrigin="0.499,0.48" Margin="0,0,0,675">
-            <StackPanel Orientation="Horizontal" Width="309">
+                   Width="1200" 
+                   Background="#7AA7D2" 
+                   RenderTransformOrigin="0.499,0.48" 
+                   Margin="0,0,0,675">
+            <StackPanel Orientation="Horizontal" 
+                        Width="309">
                 <TextBlock Text="Поиск: " 
-                           Width="74" TextAlignment="Center" 
+                           Width="74" 
+                           TextAlignment="Center" 
                            Foreground="White"
                            FontStyle="Normal"
-                           FontFamily="Bahnschrift" FontSize="20" RenderTransformOrigin="0.847,0.562" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="20" 
+                           RenderTransformOrigin="0.847,0.562" 
                            />
                 <TextBox Width="225"
                          x:Name="TBoxSearch"
                          FontSize="15"
-                        
-                         Margin="10,0,0,0"/>
+                         Margin="10,0,0,0"
+                         FontFamily="Comic Sans MS"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Сортировка: "
                            Foreground="White"
                            Width="131"
-                           FontFamily="Bahnschrift"
-                           TextAlignment="Right" FontSize="20"/>
+                           FontFamily="Comic Sans MS"
+                           TextAlignment="Right" 
+                           FontSize="20"/>
                 <ComboBox Width="271"
                           x:Name="ComboType"
-                        
-                          DisplayMemberPath="Title"/>
+                          DisplayMemberPath="Title"
+                          FontFamily="Comic Sans MS"/>
                 <TextBlock Text="Фильтрация: "
-                    Foreground="White"
-                    Width="132"
-                    FontFamily="Bahnschrift"
-                    TextAlignment="Right" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                           Foreground="White"
+                           Width="132"
+                           FontFamily="Comic Sans MS"
+                           TextAlignment="Right" 
+                           FontSize="20" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
                 <ComboBox Width="251"
                     x:Name="ComboType_Copy"
-                   
                     DisplayMemberPath="Title"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="Back"
                            Text="Выход"
-                           FontFamily="Bahnschrift"
+                           FontFamily="Comic Sans MS"
                            FontSize="20" 
                            FontWeight="Bold" 
                            TextDecorations="Underline"
@@ -58,7 +68,8 @@
                            Cursor="Hand" 
                            Margin="20,0,0,0"
                            MouseLeftButtonDown="Back_MouseLeftButtonDown"
-                           Width="78" RenderTransformOrigin="1.032,0.655"/>
+                           Width="78" 
+                           RenderTransformOrigin="1.032,0.655"/>
             </StackPanel>
 
         </WrapPanel>
@@ -67,7 +78,8 @@
                   ItemsSource="{Binding Service}" 
                   Margin="0,25,0,106"
                   Visibility="Hidden"
-                  Cursor="Hand" MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
+                  Cursor="Hand" 
+                  MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -83,7 +95,6 @@
                         <Border BorderThickness="1" 
                             BorderBrush="Black" 
                             CornerRadius="5">
-
                             <Grid Margin="0" 
                               HorizontalAlignment="Stretch">
                                 <Grid.ToolTip>
@@ -121,17 +132,76 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Margin="496,603,496,59" Visibility="Hidden" x:Name="Str">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Name="txtPrev1" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev1" Text="&lt;&lt;" MouseLeftButtonDown="Glavnaya_GoPage"></TextBlock>
-                <TextBlock Name="txtPrev" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev" Text=" &lt;" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txt1" FontFamily="Monotype Corsiva" FontSize="30" Uid="1" Text="{Binding  Path = NPage[0]}" Visibility="{Binding Visible[0]}" FontWeight="{Binding Bold[0]}" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txt2" FontFamily="Monotype Corsiva" FontSize="30" Uid="2" Text="{Binding  Path = NPage[1]}" Visibility="{Binding Visible[1]}" FontWeight="{Binding Bold[1]}" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txt3" FontFamily="Monotype Corsiva" FontSize="30" Uid="3" Text="{Binding  Path = NPage[2]}" Visibility="{Binding Visible[2]}" FontWeight="{Binding Bold[2]}" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txt4" FontFamily="Monotype Corsiva" FontSize="30" Uid="4" Text="{Binding  Path = NPage[3]}" Visibility="{Binding Visible[3]}" FontWeight="{Binding Bold[3]}" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txt5" FontFamily="Monotype Corsiva" FontSize="30" Uid="5" Text="{Binding  Path = NPage[4]}" Visibility="{Binding Visible[4]}" FontWeight="{Binding Bold[4]}" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txtNext" FontFamily="Monotype Corsiva" FontSize="30" Uid="next" Text=" &gt;" MouseLeftButtonDown="Glavnaya_GoPage"/>
-                <TextBlock Name="txtNext1" FontFamily="Monotype Corsiva" FontSize="30" Uid="next1" Text=" &gt;&gt;" MouseLeftButtonDown="Glavnaya_GoPage"/>
+        <Grid Margin="496,603,496,59" 
+              Visibility="Hidden" 
+              x:Name="Str">
+            <StackPanel Orientation="Horizontal" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center">
+                <TextBlock Name="txtPrev1" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="prev1" 
+                           Text="&lt;&lt;" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"></TextBlock>
+                <TextBlock Name="txtPrev" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="prev" 
+                           Text=" &lt;" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txt1" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="1" 
+                           Text="{Binding  Path = NPage[0]}" 
+                           Visibility="{Binding Visible[0]}" 
+                           FontWeight="{Binding Bold[0]}" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txt2" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="2" 
+                           Text="{Binding  Path = NPage[1]}" 
+                           Visibility="{Binding Visible[1]}" 
+                           FontWeight="{Binding Bold[1]}" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txt3" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="3" 
+                           Text="{Binding  Path = NPage[2]}" 
+                           Visibility="{Binding Visible[2]}" 
+                           FontWeight="{Binding Bold[2]}" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txt4" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="4" 
+                           Text="{Binding  Path = NPage[3]}" 
+                           Visibility="{Binding Visible[3]}" 
+                           FontWeight="{Binding Bold[3]}" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txt5" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="5" 
+                           Text="{Binding  Path = NPage[4]}" 
+                           Visibility="{Binding Visible[4]}"
+                           FontWeight="{Binding Bold[4]}" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txtNext" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="next" 
+                           Text=" &gt;" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
+                <TextBlock Name="txtNext1" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="next1" 
+                           Text=" &gt;&gt;" 
+                           MouseLeftButtonDown="Glavnaya_GoPage"/>
             </StackPanel>
         </Grid>
         <ListView
@@ -174,29 +244,30 @@
                                         Margin="15"
                                         Orientation="Horizontal">
                                     <Image Source="/Image/zagl.jpg"
-                                       Height="100" Width="160"
+                                       Height="100" 
+                                           Width="160"
                                        HorizontalAlignment="Left"/>
                                     <StackPanel Grid.Column="1"
                                             Margin="0,35,0,0"
                                             Orientation="Horizontal">
                                         <TextBlock Text="{Binding id_user}"
-                                                   FontFamily="Monotype Corsiva"
+                                                   FontFamily="Comic Sans MS"
                                                    FontSize="30"
                                                    Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding id_work}"
-                                                   FontFamily="Monotype Corsiva"
+                                                   FontFamily="Comic Sans MS"
                                                    FontSize="30"
                                                    Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding id_service}"
-                                                   FontFamily="Monotype Corsiva"
+                                                   FontFamily="Comic Sans MS"
                                                    FontSize="30"
                                                    Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding result}"
-                                              FontFamily="Monotype Corsiva"
+                                              FontFamily="Comic Sans MS"
                                                    FontSize="30"
                                                    Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding data}"
-                                               FontFamily="Monotype Corsiva"
+                                               FontFamily="Comic Sans MS"
                                                    FontSize="30"
                                                    Margin="30,0,0,0"/>
                                     </StackPanel>
@@ -207,17 +278,71 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid Margin="496,603,496,59" Visibility="Hidden" x:Name="Str2">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Name="txtPrev12" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev1" Text="&lt;&lt;" Foreground="#FF7AA7D2"></TextBlock>
-                <TextBlock Name="txtPrev2" FontFamily="Monotype Corsiva" FontSize="30" Uid="prev" Text=" &lt;" Foreground="#FF7AA7D2"/>
-                <TextBlock Name="txt12" FontFamily="Monotype Corsiva" FontSize="30" Uid="1" Text="{Binding  Path = NPage[0]}" Visibility="{Binding Visible[0]}" FontWeight="{Binding Bold[0]}"/>
-                <TextBlock Name="txt22" FontFamily="Monotype Corsiva" FontSize="30" Uid="2" Text="{Binding  Path = NPage[1]}" Visibility="{Binding Visible[1]}" FontWeight="{Binding Bold[1]}"/>
-                <TextBlock Name="txt32" FontFamily="Monotype Corsiva" FontSize="30" Uid="3" Text="{Binding  Path = NPage[2]}" Visibility="{Binding Visible[2]}" FontWeight="{Binding Bold[2]}"/>
-                <TextBlock Name="txt42" FontFamily="Monotype Corsiva" FontSize="30" Uid="4" Text="{Binding  Path = NPage[3]}" Visibility="{Binding Visible[3]}" FontWeight="{Binding Bold[3]}"/>
-                <TextBlock Name="txt52" FontFamily="Monotype Corsiva" FontSize="30" Uid="5" Text="{Binding  Path = NPage[4]}" Visibility="{Binding Visible[4]}" FontWeight="{Binding Bold[4]}"/>
-                <TextBlock Name="txtNext2" FontFamily="Monotype Corsiva" FontSize="30" Uid="next" Text=" &gt;" Foreground="#FF7AA7D2"/>
-                <TextBlock Name="txtNext12" FontFamily="Monotype Corsiva" FontSize="30" Uid="next1" Text=" &gt;&gt;" Foreground="#FF7AA7D2"/>
+        <Grid Margin="496,603,496,59" 
+              Visibility="Hidden" 
+              x:Name="Str2">
+            <StackPanel Orientation="Horizontal" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center">
+                <TextBlock Name="txtPrev12" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="prev1" 
+                           Text="&lt;&lt;" 
+                           Foreground="#FF7AA7D2"></TextBlock>
+                <TextBlock Name="txtPrev2" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="prev" 
+                           Text=" &lt;" 
+                           Foreground="#FF7AA7D2"/>
+                <TextBlock Name="txt12" 
+                           FontFamily="Comic Sans MS"
+                           FontSize="30" 
+                           Uid="1" 
+                           Text="{Binding  Path = NPage[0]}" 
+                           Visibility="{Binding Visible[0]}" 
+                           FontWeight="{Binding Bold[0]}"/>
+                <TextBlock Name="txt22" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="2" 
+                           Text="{Binding  Path = NPage[1]}" 
+                           Visibility="{Binding Visible[1]}" 
+                           FontWeight="{Binding Bold[1]}"/>
+                <TextBlock Name="txt32" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="3" 
+                           Text="{Binding  Path = NPage[2]}" 
+                           Visibility="{Binding Visible[2]}" 
+                           FontWeight="{Binding Bold[2]}"/>
+                <TextBlock Name="txt42" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="4" 
+                           Text="{Binding  Path = NPage[3]}" 
+                           Visibility="{Binding Visible[3]}" 
+                           FontWeight="{Binding Bold[3]}"/>
+                <TextBlock Name="txt52" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="5" 
+                           Text="{Binding  Path = NPage[4]}" 
+                           Visibility="{Binding Visible[4]}" 
+                           FontWeight="{Binding Bold[4]}"/>
+                <TextBlock Name="txtNext2" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="next" 
+                           Text=" &gt;" 
+                           Foreground="#FF7AA7D2"/>
+                <TextBlock Name="txtNext12" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="next1" 
+                           Text=" &gt;&gt;" 
+                           Foreground="#FF7AA7D2"/>
             </StackPanel>
         </Grid>
         <TextBox x:Name="Time" 
@@ -228,21 +353,26 @@
                  Margin="1115,610,0,0" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 FontFamily="Monotype Corsiva"
+                 FontFamily="Comic Sans MS"
                  FontSize="30" 
                  Foreground="#7AA7D2" 
                  FontWeight="Bold" 
                  TextChanged="Time_TextChanged"
                  BorderBrush="{x:Null}"
                  Background="{x:Null}"
-                 SelectionBrush="{x:Null}" Width="56" IsEnabled="False" Height="36"/>
+                 SelectionBrush="{x:Null}" 
+                 Width="56" 
+                 IsEnabled="False" 
+                 Height="36"/>
         <Label Content="Осталось времени"
                HorizontalAlignment="Left"
-               Margin="930,610,0,0"
+               Margin="914,610,0,0"
                VerticalAlignment="Top"
                FontSize="20"
                Height="36"
-               Foreground="#FF7AA7D2" Width="180"/>
+               Foreground="#FF7AA7D2" 
+               Width="196"
+               FontFamily="Comic Sans MS"/>
         <Image x:Name="Result"
                Source="/Pictures/Приёмы.png"
                HorizontalAlignment="Left" 
@@ -265,7 +395,8 @@
                Source="/Pictures/Add.png"
                Height="54" 
                Width="54"
-               Margin="89,595,1057,51" MouseLeftButtonDown="Add_MouseLeftButtonDown"/>
+               Margin="89,595,1057,51" 
+               MouseLeftButtonDown="Add_MouseLeftButtonDown"/>
 
 
     </Grid>
