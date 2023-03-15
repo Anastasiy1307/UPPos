@@ -13,7 +13,11 @@
                FontSize="40"
                FontFamily="Comic Sans MS"
                Height="76"
-               Foreground="White" Margin="0,67,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="360" />
+               Foreground="White" 
+               Margin="0,67,0,0" 
+               VerticalAlignment="Top" 
+               HorizontalAlignment="Center" 
+               Width="360" />
         <TextBox x:Name="NameServAdd" 
                  Style="{DynamicResource TextBoxStyle1}" 
                  HorizontalAlignment="Center" 
@@ -30,7 +34,11 @@
                FontSize="40"
                FontFamily="Comic Sans MS"
                Height="67"
-               Foreground="White" Margin="0,296,0,0" HorizontalAlignment="Center" Width="114" VerticalAlignment="Top"
+               Foreground="White" 
+               Margin="0,296,0,0" 
+               HorizontalAlignment="Center" 
+               Width="114" 
+               VerticalAlignment="Top"
                />
         <TextBox x:Name="PriceServAdd" 
                  Style="{DynamicResource TextBoxStyle1}" 
@@ -41,7 +49,8 @@
                  Width="520" 
                  FontSize="40" 
                  VerticalAlignment="Top" 
-                 TextAlignment="Center" Margin="0,368,0,0" />
+                 TextAlignment="Center" 
+                 Margin="0,368,0,0" />
 
         <TextBlock x:Name="AddSBut"
                    Text="Добавить"
