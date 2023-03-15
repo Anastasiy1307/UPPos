@@ -73,6 +73,7 @@ namespace UPPos
             {
                 if (workers[i].login == log && workers[i].id_dolgnost == 2 || workers[i].login == log && workers[i].id_dolgnost == 3)
                 {
+                    
                     //Image.Visibility= Visibility.Hidden;
                 }
                 if (workers[i].login == log && workers[i].id_dolgnost == 1)

@@ -49,31 +49,30 @@
                    Foreground="White"
                    FontFamily="Comic Sans MS"
                    TextDecorations="Underline" 
-                   Margin="99,532,0,0" 
+                   Margin="99,522,0,0" 
                    HorizontalAlignment="Left" 
                    Width="238" 
                    Height="92" 
                    VerticalAlignment="Top" MouseLeftButtonDown="UpdSBut_MouseLeftButtonDown"/>
-        
+
         <TextBlock x:Name="DelSBut"
                    Text="Удалить"
                    FontSize="50" 
                    Foreground="White"
                    FontFamily="Comic Sans MS"
                    TextDecorations="Underline" 
-                   Margin="896,532,99,0" 
+                   Margin="896,518,0,0" 
                    HorizontalAlignment="Left" 
                    Width="238" 
                    Height="92" 
                    VerticalAlignment="Top"/>
-
         <TextBlock x:Name="BackSBut"
-                   Text="Назад"
-                   FontSize="35" 
-                   Foreground="White"
-                   FontFamily="Comic Sans MS"
-                   TextDecorations="Underline" 
-                   Margin="1078,10,10,622" 
-                   MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
+            Text="Назад"
+            FontSize="35" 
+            Foreground="White"
+            FontFamily="Comic Sans MS"
+            TextDecorations="Underline" 
+            Margin="1053,10,-30,575" 
+            MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
     </Grid>
 </Page>
