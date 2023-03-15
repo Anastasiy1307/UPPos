@@ -19,7 +19,7 @@ namespace UPPos
         public Nullable<int> id_work { get; set; }
         public Nullable<int> id_service { get; set; }
         public string result { get; set; }
-        public string data { get; set; }
+        public Nullable<System.DateTime> data { get; set; }
     
         public virtual Service Service { get; set; }
         public virtual Users Users { get; set; }
