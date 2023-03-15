@@ -71,7 +71,7 @@
                    Foreground="White"
                    FontFamily="Comic Sans MS"
                    TextDecorations="Underline" 
-                   Margin="1078,10,10,622" 
+                   Margin="1044,10,-34,595" 
                    MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
 
 

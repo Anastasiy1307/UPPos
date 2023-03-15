@@ -64,9 +64,9 @@
         </WrapPanel>
         <ListView
                   x:Name="LViewServ"
-                  ItemsSource="{Binding Source = Service}" 
+                  ItemsSource="{Binding Service}" 
                   Margin="0,25,0,106"
-                  Visibility="Visible"
+                  Visibility="Hidden"
                   Cursor="Hand" MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
 
             <ListView.ItemContainerStyle>
@@ -177,23 +177,28 @@
                                        Height="100" Width="160"
                                        HorizontalAlignment="Left"/>
                                     <StackPanel Grid.Column="1"
-                                            Margin="0"
-                                            Orientation="Vertical">
+                                            Margin="0,35,0,0"
+                                            Orientation="Horizontal">
                                         <TextBlock Text="{Binding id_user}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
+                                                   FontFamily="Monotype Corsiva"
+                                                   FontSize="30"
+                                                   Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding id_work}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
+                                                   FontFamily="Monotype Corsiva"
+                                                   FontSize="30"
+                                                   Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding id_service}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
+                                                   FontFamily="Monotype Corsiva"
+                                                   FontSize="30"
+                                                   Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding result}"
-                                               FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
+                                              FontFamily="Monotype Corsiva"
+                                                   FontSize="30"
+                                                   Margin="30,0,0,0"/>
                                         <TextBlock Text="{Binding data}"
                                                FontFamily="Monotype Corsiva"
-                                               FontSize="30"/>
+                                                   FontSize="30"
+                                                   Margin="30,0,0,0"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Grid>
