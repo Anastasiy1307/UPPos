@@ -105,7 +105,7 @@
                  HorizontalAlignment="Center" 
                  Margin="0,142,0,0" 
                  TextWrapping="Wrap" 
-
+                 FontFamily="Comic Sans MS"
                  Height="60" 
                  Width="520" 
                  FontSize="40" 
@@ -120,7 +120,7 @@
                  VerticalAlignment="Top" 
                  Height="60" 
                  Width="520" 
-
+                 FontFamily="Comic Sans MS"
                  TextAlignment="Center" />
         <TextBlock x:Name="registration" 
                    Text="Зарегистрироваться" 
@@ -133,7 +133,7 @@
                    Foreground="#7AA7D2" 
                    FontSize="50" 
                    Margin="0,499,0,135" 
-                   FontFamily="Bahnschrift" 
+                   FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Regis_MouseLeftButtonDown"
                    Cursor="Hand" 
                    />
@@ -149,8 +149,8 @@
                    Foreground="#7AA7D2" 
                    FontSize="25" 
                    Margin="43,618,0,52" 
-                   FontFamily="Bahnschrift" 
-                MouseLeftButtonDown="Back_MouseLeftButtonDown"
+                   FontFamily="Comic Sans MS" 
+                   MouseLeftButtonDown="Back_MouseLeftButtonDown"
                    Cursor="Hand"/>
         <TextBox x:Name="password_Copy" 
                  Style="{DynamicResource TextBoxStyle1}" 
@@ -160,7 +160,7 @@
                  VerticalAlignment="Top" 
                  Height="60" 
                  Width="520" 
-
+                 FontFamily="Comic Sans MS"
                  Margin="0,396,0,0" 
                  TextAlignment="Center"/>
         <Label Content="Логин" 
@@ -173,7 +173,7 @@
                Foreground="#7AA7D2" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift"/>
+               FontFamily="Comic Sans MS"/>
         <Label Content="Пароль" 
                HorizontalAlignment="Center" 
                Margin="0,207,0,0" 
@@ -184,7 +184,7 @@
                Foreground="#7AA7D2" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift"/>
+               FontFamily="Comic Sans MS"/>
         <Label Content="Повторите пароль" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
@@ -194,7 +194,7 @@
                Foreground="#7AA7D2" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift" 
+               FontFamily="Comic Sans MS" 
                Margin="0,336,0,0"/>
 
     </Grid>

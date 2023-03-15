@@ -109,11 +109,11 @@
                Foreground="#FF7AA7D2" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Bahnschrift"/>
+               FontFamily="Comic Sans MS"/>
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="login" 
                  TextWrapping="Wrap" 
-
+                 FontFamily="Comic Sans MS"
                  Height="60"
                  Width="520" 
                  Margin="340,176,340,464" 
@@ -126,14 +126,15 @@
                Width="150" 
                Margin="0,236,0,404"
                Foreground="#7AA7D2" 
-               FontFamily="Bahnschrift"/>
+               FontFamily="Comic Sans MS"/>
         <PasswordBox Style="{DynamicResource PasswordBoxStyle1}" 
                      x:Name="password" 
                      HorizontalAlignment="Center" 
                      Height="60"
                      Width="520" 
                      Margin="0,296,0,344" 
-                     FontSize="40" />
+                     FontSize="40" 
+                     FontFamily="Comic Sans MS" />
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="pwdVisu" 
                  TextWrapping="Wrap" 
@@ -141,7 +142,8 @@
                  Width="520" 
                  Margin="0,296,0,344"
                  FontSize="40" 
-                 TextAlignment="Left" FontFamily="Comic Sans MS"
+                 TextAlignment="Left" 
+                 FontFamily="Comic Sans MS"
                  Visibility="Hidden"/>
 
         <TextBlock x:Name="Entre"
@@ -154,7 +156,7 @@
                    FontWeight="Bold" 
                    Foreground="#7AA7D2"
                    FontSize="50" Margin="0,387,0,247" 
-                   FontFamily="Bahnschrift" 
+                   FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Avtoriz_Vxod"
                    Cursor="Hand"/>
 
@@ -166,7 +168,7 @@
                    Foreground="#7AA7D2"
                    FontSize="30" 
                    Margin="281,526,0,132" 
-                   FontFamily="Bahnschrift"/>
+                   FontFamily="Comic Sans MS"/>
         <TextBlock x:Name="Reg"
                    Text="Зарегистрироваться"
                    TextDecorations="Underline" 
@@ -177,7 +179,7 @@
                    FontWeight="Bold" 
                    Foreground="#7AA7D2"
                    FontSize="30" Margin="598,526,0,132" 
-                   FontFamily="Bahnschrift" 
+                   FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Reg_MouseLeftButtonDown"
                    Cursor="Hand"/>
         <Image HorizontalAlignment="Left"
