@@ -80,6 +80,7 @@ namespace UPPos
                     //Image.Visibility = Visibility.Hidden;
                 }
             }
+            //List_Service = List_Service.FindAll(x => x.service1.Contains(TBoxSearch.Text) && x.price);
             ////Вывод таблицы Сервис
             //List_Service = Entities1.GetContex().Service.ToList();
             //int countS = Entities1.GetContex().Service.Count();
@@ -92,6 +93,15 @@ namespace UPPos
             //sp.CountPageFlower = 3;
             //sp.CountlistFlower = countR;
             //LViewResult.ItemsSource = List_Result.Skip(0).Take(sp.CountPagesFlower).ToList();
+            var currentServ = Entities1.GetContex().Service.ToList();
+            LViewServ.ItemsSource = currentServ;
+            LoadServ();
+        }
+        
+
+        private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
         }
 
         public int TickCounter
@@ -197,7 +207,7 @@ namespace UPPos
             List<Results> result = new List<Results>();
             List<Users> use = new List<Users>();
             TBoxSearch.Text = "";
-            result = Entities1.GetContex().Results.ToList();
+            //result = Entities1.GetContex().Results.ToList();
             use = Entities1.GetContex().Users.ToList();
             int counts1 = Entities1.GetContex().Results.Count();
             //for (int i = 0; i < counts1; i++)
@@ -260,5 +270,18 @@ namespace UPPos
         {
             frame1.Navigate(new UpdServ(User, frame1, Item));
         }
+        public void LoadServ()
+        {
+            //LViewServ.Items.Clear(); // очищаем лист с элементами
+
+            //for (int i = 0; i < services.Count; i++) // перебираем элементы
+            //{
+            //    LViewServ.Items.Add(services[i]); // добавляем элементы в ListBox
+            //}
+            List_Service = Entities1.GetContex().Service.ToList();
+            List_Service = List_Service.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewServ.ItemsSource = List_Service.OrderBy(p => p.price).ToList();
+        }
+        
     }
 }

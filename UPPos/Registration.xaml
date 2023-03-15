@@ -144,11 +144,10 @@
                    TextWrapping="WrapWithOverflow" 
                    HorizontalAlignment="Left" 
                    Width="250" 
-                   Height="30" 
                    FontWeight="Bold" 
                    Foreground="#7AA7D2" 
                    FontSize="25" 
-                   Margin="43,618,0,52" 
+                   Margin="43,618,0,29" 
                    FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Back_MouseLeftButtonDown"
                    Cursor="Hand"/>

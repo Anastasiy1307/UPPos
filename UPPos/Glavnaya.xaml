@@ -25,13 +25,12 @@
                            FontStyle="Normal"
                            FontFamily="Comic Sans MS" 
                            FontSize="20" 
-                           RenderTransformOrigin="0.847,0.562" 
-                           />
+                           RenderTransformOrigin="0.847,0.562"/>
                 <TextBox Width="225"
                          x:Name="TBoxSearch"
                          FontSize="15"
                          Margin="10,0,0,0"
-                         FontFamily="Comic Sans MS"/>
+                         FontFamily="Comic Sans MS" TextChanged="TBoxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Сортировка: "
@@ -68,7 +67,7 @@
                            Cursor="Hand" 
                            Margin="20,0,0,0"
                            MouseLeftButtonDown="Back_MouseLeftButtonDown"
-                           Width="78" 
+                           Width="86" 
                            RenderTransformOrigin="1.032,0.655"/>
             </StackPanel>
 
@@ -145,7 +144,7 @@
                            Text="&lt;&lt;" 
                            MouseLeftButtonDown="Glavnaya_GoPage"></TextBlock>
                 <TextBlock Name="txtPrev" 
-                           FontFamily="Monotype Corsiva" 
+                           FontFamily="Comic Sans MS" 
                            FontSize="30" 
                            Uid="prev" 
                            Text=" &lt;" 

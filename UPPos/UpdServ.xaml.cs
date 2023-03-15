@@ -32,7 +32,6 @@ namespace UPPos
             InitializeComponent();
 
         }
-
         private void UpdSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             string name = NameServUpd.Text;
@@ -57,13 +56,10 @@ namespace UPPos
                 }
                 break;
             }
-             
-            
         }
-
         private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame1.Navigate(new Glavnaya(Log, frame1, Item));
         }
     }
 }
