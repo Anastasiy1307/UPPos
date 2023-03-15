@@ -180,21 +180,18 @@
                                             Margin="0"
                                             Orientation="Vertical">
                                         <TextBlock Text="{Binding id_user}"
-                                               Name="Ser"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                         <TextBlock Text="{Binding id_work}"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                         <TextBlock Text="{Binding id_service}"
-                                               Name="Ser"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                         <TextBlock Text="{Binding result}"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                         <TextBlock Text="{Binding data}"
-                                               Name="Ser"
                                                FontFamily="Monotype Corsiva"
                                                FontSize="30"/>
                                     </StackPanel>
