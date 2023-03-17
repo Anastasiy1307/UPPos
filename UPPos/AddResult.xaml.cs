@@ -38,7 +38,7 @@ namespace UPPos
             int id_u;
             int id_w;
             int id_s;
-            string r;
+            char r;
             int count = Entities1.GetContex().Service.Count();
             DateTime d;
             List_Results[0].id = count + 1;
@@ -55,7 +55,7 @@ namespace UPPos
                                 List_Results[0].id_user = id_u;
                                 List_Results[0].id_work = id_w;
                                 List_Results[0].id_service = id_s;
-                                List_Results[0].result = r;
+                                List_Results[0].result = r.ToString();
                                 List_Results[0].data = d;
                                 Entities1.GetContex().Results.Add(List_Results[0]);
                                 Entities1.GetContex().SaveChanges();
@@ -93,6 +93,11 @@ namespace UPPos
         {
 
             frame1.Navigate(new Glavnaya(Log, frame1, Item));
+        }
+
+        private void result_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            result.SelectedIndex = result.Items.IndexOf("+");
         }
     }
 }

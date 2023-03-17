@@ -288,13 +288,13 @@
                            FontSize="30" 
                            Uid="prev1" 
                            Text="&lt;&lt;" 
-                           Foreground="#FF7AA7D2"></TextBlock>
+                           Foreground="Black"></TextBlock>
                 <TextBlock Name="txtPrev2" 
                            FontFamily="Comic Sans MS" 
                            FontSize="30" 
                            Uid="prev" 
                            Text=" &lt;" 
-                           Foreground="#FF7AA7D2"/>
+                           Foreground="Black"/>
                 <TextBlock Name="txt12" 
                            FontFamily="Comic Sans MS"
                            FontSize="30" 
@@ -335,13 +335,13 @@
                            FontSize="30" 
                            Uid="next" 
                            Text=" &gt;" 
-                           Foreground="#FF7AA7D2"/>
+                           Foreground="Black"/>
                 <TextBlock Name="txtNext12" 
                            FontFamily="Comic Sans MS" 
                            FontSize="30" 
                            Uid="next1" 
                            Text=" &gt;&gt;" 
-                           Foreground="#FF7AA7D2"/>
+                           Foreground="Black"/>
             </StackPanel>
         </Grid>
         <TextBox x:Name="Time" 

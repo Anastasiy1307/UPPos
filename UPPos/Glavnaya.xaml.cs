@@ -167,7 +167,8 @@ namespace UPPos
             Result.Visibility = Visibility.Visible;
             LViewServ.Visibility = Visibility.Hidden;
             LViewResult.Visibility = Visibility.Visible;
-         
+            Str.Visibility = Visibility.Visible;
+            Str2.Visibility = Visibility.Hidden;
 
             var all = Entities1.GetContex().Service.ToList();
 
@@ -203,16 +204,18 @@ namespace UPPos
             Service.Visibility = Visibility.Visible;
             LViewResult.Visibility = Visibility.Hidden;
             LViewServ.Visibility = Visibility.Visible;
-
+            Str.Visibility = Visibility.Hidden;
+            Str2.Visibility = Visibility.Visible;
+            
             List<Results> result = new List<Results>();
             List<Users> use = new List<Users>();
             TBoxSearch.Text = "";
-            //result = Entities1.GetContex().Results.ToList();
+            result = Entities1.GetContex().Results.ToList();
             use = Entities1.GetContex().Users.ToList();
             int counts1 = Entities1.GetContex().Results.Count();
             //for (int i = 0; i < counts1; i++)
             //{
-            //    if (result[i].login != user)
+            //    if (result[i].login != use)
             //    {
             //        result.RemoveAt(i);
             //        i--;
@@ -263,7 +266,15 @@ namespace UPPos
 
         private void Add_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame1.Navigate(new AddServ(User,frame1, Item));
+            if(LViewResult.Visibility == Visibility.Visible && LViewServ.Visibility == Visibility.Hidden)
+            {
+                frame1.Navigate(new AddResult(User, frame1, Item));
+            }
+            else
+            {
+                frame1.Navigate(new AddServ(User, frame1, Item));
+            }
+           
         }
 
         private void LViewServ_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
