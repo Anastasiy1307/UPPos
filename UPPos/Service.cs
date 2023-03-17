@@ -23,6 +23,7 @@ namespace UPPos
         public int id { get; set; }
         public string service1 { get; set; }
         public Nullable<double> price { get; set; }
+        public string image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Results> Results { get; set; }

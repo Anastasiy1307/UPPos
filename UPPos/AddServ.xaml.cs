@@ -39,7 +39,7 @@ namespace UPPos
             string name = NameServAdd.Text;
             double price;
             int count = Entities1.GetContex().Service.Count();
-            List_Services[0].id =  count + 1;
+
             List_Services[0].service1 = name;
             if(double.TryParse(PriceServAdd.Text, out price))
             {

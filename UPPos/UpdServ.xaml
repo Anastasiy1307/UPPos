@@ -14,14 +14,14 @@
                FontFamily="Comic Sans MS"
                Height="76"
                Foreground="White" 
-               Margin="0,67,0,0" 
+               Margin="654,126,0,0" 
                VerticalAlignment="Top" 
-               HorizontalAlignment="Center" 
+               HorizontalAlignment="Left" 
                Width="360" />
         <TextBox x:Name="NameServUpd" 
                  Style="{DynamicResource TextBoxStyle1}" 
-                 HorizontalAlignment="Center" 
-                 Margin="0,148,0,0" 
+                 HorizontalAlignment="Left" 
+                 Margin="574,207,0,0" 
                  TextWrapping="Wrap" 
                  FontFamily="Comic Sans MS"
                  Height="60" 
@@ -30,19 +30,33 @@
                  VerticalAlignment="Top" 
                  TextAlignment="Center" />
 
+        <Image x:Name="Image"
+               Margin="125,114,706,209"
+               Cursor="Hand">
+
+            <Image.Source>
+                <Binding>
+                    <Binding.TargetNullValue>
+                        <ImageSource>/Pictures/zagl.jpg</ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
+
+
         <Label Content="Цена"
                FontSize="40"
                FontFamily="Comic Sans MS"
                Height="67"
                Foreground="White" 
-               Margin="0,296,0,0" 
-               HorizontalAlignment="Center" 
+               Margin="777,355,0,0" 
+               HorizontalAlignment="Left" 
                Width="114" 
                VerticalAlignment="Top"
                />
         <TextBox x:Name="PriceServUpd" 
                  Style="{DynamicResource TextBoxStyle1}" 
-                 HorizontalAlignment="Center" 
+                 HorizontalAlignment="Left" 
                  TextWrapping="Wrap" 
                  FontFamily="Comic Sans MS"
                  Height="60" 
@@ -50,7 +64,7 @@
                  FontSize="40" 
                  VerticalAlignment="Top" 
                  TextAlignment="Center" 
-                 Margin="0,368,0,0" />
+                 Margin="574,427,0,0" />
 
         <TextBlock x:Name="UpdSBut"
                    Text="Изменить"
@@ -64,14 +78,14 @@
                    Height="92" 
                    VerticalAlignment="Top" 
                    MouseLeftButtonDown="UpdSBut_MouseLeftButtonDown"/>
-        
+
         <TextBlock x:Name="DelSBut"
                    Text="Удалить"
                    FontSize="50" 
                    Foreground="White"
                    FontFamily="Comic Sans MS"
                    TextDecorations="Underline" 
-                   Margin="896,532,99,0" 
+                   Margin="856,532,0,0" 
                    HorizontalAlignment="Left" 
                    Width="238" 
                    Height="92" 

@@ -78,7 +78,7 @@
                   Margin="0,25,0,106"
                   Visibility="Hidden"
                   Cursor="Hand" 
-                  MouseLeftButtonDown="LViewServ_MouseLeftButtonDown">
+                  >
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -89,7 +89,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid 
+                    <Grid MouseLeftButtonDown="LViewServ_MouseLeftButtonDown"
                           Cursor="Hand">
                         <Border BorderThickness="1" 
                             BorderBrush="Black" 
@@ -111,8 +111,9 @@
                                 <StackPanel Grid.Column="1"
                                         Margin="15"
                                         Orientation="Horizontal">
-                                    <Image Source="/Image/zagl.jpg"
+                                    <Image
                                        Height="100" Width="160"
+                                           Source="{Binding image}"
                                        HorizontalAlignment="Left"/>
                                     <StackPanel Grid.Column="1"
                                             Margin="0"

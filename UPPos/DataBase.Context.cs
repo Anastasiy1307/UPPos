@@ -12,7 +12,7 @@ namespace UPPos
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class Entities1 : DbContext
     {
         private static Entities1 _instance;
@@ -31,7 +31,6 @@ namespace UPPos
             if (_instance == null) _instance = new Entities1();
             return _instance;
         }
-
         public virtual DbSet<Dolgnosti> Dolgnosti { get; set; }
         public virtual DbSet<History> History { get; set; }
         public virtual DbSet<Results> Results { get; set; }
