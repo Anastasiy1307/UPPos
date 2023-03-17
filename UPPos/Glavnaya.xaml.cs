@@ -182,6 +182,9 @@ namespace UPPos
             List_Service = Entities1.GetContex().Service.ToList();
             LViewServ.ItemsSource = Entities1.GetContex().Service.ToList();
 
+            //List<Service> services = new List<Service>();
+          //  services = Entities1.GetContex().Service.ToList();
+
             sp.CountPageFlower = Entities1.GetContex().Service.ToList().Count;
             DataContext = sp;
 
@@ -279,7 +282,8 @@ namespace UPPos
 
         private void LViewServ_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame1.Navigate(new UpdServ(User, frame1, Item));
+            object item = LViewServ.SelectedItem;
+            frame1.Navigate(new UpdServ(User, frame1, item));
         }
         public void LoadServ()
         {
