@@ -68,8 +68,7 @@
                Foreground="#7AA7D2" 
                FontWeight="Normal" 
                FontStyle="Normal" 
-               FontFamily="Comic Sans MS" 
-              />
+               FontFamily="Comic Sans MS" />
 
                 <TextBox x:Name="id_service" 
                  Style="{DynamicResource TextBoxStyle1}" 
@@ -84,29 +83,25 @@
                  TextAlignment="Center"/>
                 
                 <Label Content="Результат" 
-               HorizontalAlignment="Center" 
-              
-               VerticalAlignment="Top" 
-               FontSize="40" 
-               Height="60" 
-               Width="208" 
-               Foreground="#7AA7D2" 
-               FontWeight="Normal" 
-               FontStyle="Normal" 
-               FontFamily="Comic Sans MS"/>
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="208" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS"/>
 
-                <ComboBox 
-                  x:Name="result"
-                 HorizontalAlignment="Center"
-                  FontSize="40" 
-                
-                    
-                  VerticalAlignment="Top" 
-                  Height="60" 
-                  Width="520" 
-                  FontFamily="Comic Sans MS" SelectionChanged="result_SelectionChanged"/>
-                
-                
+
+                <ComboBox x:Name="result"
+                          FontSize="40" 
+                          Height="60" 
+                          Width="520"
+                          DisplayMemberPath="{Binding Vip}">
+                </ComboBox>
+
+
                 <Label Content="Дата предоставления услуги" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 

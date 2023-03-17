@@ -18,12 +18,17 @@ namespace UPPos
     /// <summary>
     /// Логика взаимодействия для AddResult.xaml
     /// </summary>
+    public class Znak
+    {
+        public char Vip { get; set; }
+    }
     public partial class AddResult : Page
     {
         public Frame frame1;
         object Item;
         List<Results> List_Results = new List<Results>() { new Results() };
         List<Workers> workers = new List<Workers>();
+        List<Znak> znak = new List<Znak>() { new Znak { Vip= '+' }, new Znak { Vip = '-' } };
         string Log;
         public AddResult(string log, Frame frame, object item)
         {
@@ -95,9 +100,8 @@ namespace UPPos
             frame1.Navigate(new Glavnaya(Log, frame1, Item));
         }
 
-        private void result_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            result.SelectedIndex = result.Items.IndexOf("+");
-        }
+
+        
+
     }
 }
