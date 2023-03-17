@@ -18,11 +18,31 @@ namespace UPPos
     /// <summary>
     /// Логика взаимодействия для UpdResult.xaml
     /// </summary>
+    
     public partial class UpdResult : Page
     {
-        public UpdResult()
+        public Frame frame1;
+        object Item;
+        List<Results> List_Results = new List<Results>() { new Results() };
+        List<Workers> workers = new List<Workers>();
+        private List<char> znak = new List<char>() { '+', '-' };
+        public List<char> Znak
         {
+            get => znak;
+            set { znak = value; }
+        }
+        string Log;
+        public UpdResult(string log, Frame frame, object item)
+        {
+            DataContext = this;
+            frame1 = frame;
+            Log = log;
+            Item = item;
             InitializeComponent();
+        }
+        private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            frame1.Navigate(new Glavnaya(Log, frame1, Item));
         }
     }
 }

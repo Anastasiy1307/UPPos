@@ -5,10 +5,161 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UPPos"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+       d:DesignHeight="800" d:DesignWidth="1200"
       Title="UpdResult">
 
     <Grid>
-        
+        <ScrollViewer>
+            <StackPanel>
+                <Label Content="ID Пациента" 
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="266" 
+                       HorizontalAlignment="Center" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS"/>
+
+                <TextBox x:Name="id_user" 
+                         Style="{DynamicResource TextBoxStyle1}" 
+                         HorizontalAlignment="Center"
+                         TextWrapping="Wrap" 
+                         FontFamily="Comic Sans MS"
+                         Height="60" 
+                         Width="520" 
+                         FontSize="40" 
+                         VerticalAlignment="Top" 
+                         TextAlignment="Center" />
+
+                <Label Content="ID Сотрудника" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="300" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS"/>
+
+                <TextBox x:Name="id_work" 
+                         Style="{DynamicResource TextBoxStyle1}" 
+                         HorizontalAlignment="Center"
+                         FontSize="40" 
+                         TextWrapping="Wrap" 
+                         VerticalAlignment="Top" 
+                         Height="60" 
+                         Width="520" 
+                         FontFamily="Comic Sans MS"
+                         TextAlignment="Center" />
+
+                <Label Content="ID Услуги" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="242" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS" />
+
+                <TextBox x:Name="id_service" 
+                         Style="{DynamicResource TextBoxStyle1}" 
+                         HorizontalAlignment="Center"
+                         FontSize="40" 
+                         TextWrapping="Wrap" 
+                         VerticalAlignment="Top" 
+                         Height="60" 
+                         Width="520" 
+                         FontFamily="Comic Sans MS"
+                         TextAlignment="Center"/>
+
+                <Label Content="Результат" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="208" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS"/>
+
+
+                <ComboBox x:Name="result"
+                          FontSize="40" 
+                          Height="60" 
+                          Width="520" 
+                          ItemsSource="{Binding Path=Znak}"/>
+
+
+                <Label Content="Дата предоставления услуги" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top" 
+                       FontSize="40" 
+                       Height="60" 
+                       Width="578" 
+                       Foreground="#7AA7D2" 
+                       FontWeight="Normal" 
+                       FontStyle="Normal" 
+                       FontFamily="Comic Sans MS" />
+
+                <TextBox x:Name="data" 
+                         Style="{DynamicResource TextBoxStyle1}" 
+                         HorizontalAlignment="Center"
+                         FontSize="40" 
+                         TextWrapping="Wrap" 
+                         VerticalAlignment="Top" 
+                         Height="60" 
+                         Width="520" 
+                         FontFamily="Comic Sans MS"
+                         TextAlignment="Center"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="UpdData" 
+                               Text="Изменить данные" 
+                               TextDecorations="Underline" 
+                               TextAlignment="Center" 
+                               TextWrapping="WrapWithOverflow"
+                               Width="486" 
+                               FontWeight="Bold" 
+                               Foreground="#7AA7D2" 
+                               FontSize="50" 
+                               FontFamily="Comic Sans MS"
+                               Cursor="Hand"
+                               Margin="0,0,220,0"/>
+                    <TextBlock x:Name="DelData" 
+                           Text="Удалить данные" 
+                           TextDecorations="Underline" 
+                           TextAlignment="Center" 
+                           TextWrapping="WrapWithOverflow"
+                           Width="453" 
+                           FontWeight="Bold" 
+                           Foreground="#7AA7D2" 
+                           FontSize="50" 
+                           FontFamily="Comic Sans MS"
+                           Cursor="Hand"/>
+                </StackPanel>
+
+
+                <TextBlock x:Name="back" 
+                           Text="Вернуться назад" 
+                           TextDecorations="Underline" 
+                           TextAlignment="Center" 
+                           TextWrapping="WrapWithOverflow" 
+                           HorizontalAlignment="Center"
+                           Width="250" 
+                           FontWeight="Bold" 
+                           Foreground="#7AA7D2" 
+                           FontSize="25" 
+                           FontFamily="Comic Sans MS" 
+                           Cursor="Hand"
+                           MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
