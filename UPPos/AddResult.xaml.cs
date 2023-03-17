@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,15 +29,30 @@ namespace UPPos
         object Item;
         List<Results> List_Results = new List<Results>() { new Results() };
         List<Workers> workers = new List<Workers>();
-        List<Znak> znak = new List<Znak>() { new Znak { Vip= '+' }, new Znak { Vip = '-' } };
+        private List<char> znak = new List<char>() {'+', '-'};
+        public List<char> Znak
+        {
+            get => znak;
+            set {  znak = value; }
+        }
         string Log;
+        /*2 способ добавить данные в Combobox*/
+        //private ObservableCollection<string> test = new ObservableCollection<string>() { "+", "-" };
+        //public ObservableCollection<string> Test
+        //{
+        //    get { return test; }
+        //    set { test = value; }
+        //}
+
         public AddResult(string log, Frame frame, object item)
         {
+            DataContext = this;
             frame1 = frame;
             Log = log;
             Item = item;
             InitializeComponent();
         }
+
         private void AddData_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
@@ -96,12 +112,8 @@ namespace UPPos
         }
         private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
             frame1.Navigate(new Glavnaya(Log, frame1, Item));
         }
-
-
-        
 
     }
 }
