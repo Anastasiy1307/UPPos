@@ -80,19 +80,6 @@ namespace UPPos
                     //Image.Visibility = Visibility.Hidden;
                 }
             }
-            //List_Service = List_Service.FindAll(x => x.service1.Contains(TBoxSearch.Text) && x.price);
-            ////Вывод таблицы Сервис
-            //List_Service = Entities1.GetContex().Service.ToList();
-            //int countS = Entities1.GetContex().Service.Count();
-            //sp.CountPageFlower = 3;
-            //sp.CountlistFlower = countS;
-            //LViewServ.ItemsSource = List_Service.Skip(0).Take(sp.CountPagesFlower).ToList();
-            ////Вывод таблицы 
-            //List_Result = Entities1.GetContex().Results.ToList();
-            //int countR = Entities1.GetContex().Results.Count();
-            //sp.CountPageFlower = 3;
-            //sp.CountlistFlower = countR;
-            //LViewResult.ItemsSource = List_Result.Skip(0).Take(sp.CountPagesFlower).ToList();
             var currentServ = Entities1.GetContex().Service.ToList();
             LViewServ.ItemsSource = currentServ;
             LoadServ();
@@ -101,7 +88,7 @@ namespace UPPos
 
         private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
+            LoadServ();
         }
 
         public int TickCounter
@@ -287,15 +274,27 @@ namespace UPPos
         }
         public void LoadServ()
         {
-            //LViewServ.Items.Clear(); // очищаем лист с элементами
+            var currentService = Entities1.GetContex().Service.ToList();
 
-            //for (int i = 0; i < services.Count; i++) // перебираем элементы
+            currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewServ.ItemsSource = currentService.ToList();
+
+            //var currentResult = Entities1.GetContex().Results.ToList();
+
+            //for (int i = 0; i < currentResult.Count; i++)
             //{
-            //    LViewServ.Items.Add(services[i]); // добавляем элементы в ListBox
+            //    if (currentResult[i].login != user)
+            //    {
+            //        currentResult.RemoveAt(i);
+            //        i--;
+            //    }
             //}
-            List_Service = Entities1.GetContex().Service.ToList();
-            List_Service = List_Service.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            LViewServ.ItemsSource = List_Service.OrderBy(p => p.price).ToList();
+            //currentResult = currentResult.Where(p => p.result1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            //LViewResult.ItemsSource = currentResult.ToList();
+            //
+            //List_Service = Entities1.GetContex().Service.ToList();
+            //List_Service = List_Service.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            //LViewServ.ItemsSource = List_Service.OrderBy(p => p.price).ToList();
         }
 
         private void LViewServ_MouseDoubleClick(object sender, MouseButtonEventArgs e)

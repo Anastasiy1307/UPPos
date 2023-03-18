@@ -30,7 +30,8 @@
                          x:Name="TBoxSearch"
                          FontSize="15"
                          Margin="10,0,0,0"
-                         FontFamily="Comic Sans MS" TextChanged="TBoxSearch_TextChanged"/>
+                         FontFamily="Comic Sans MS" 
+                         TextChanged="TBoxSearch_TextChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Сортировка: "
@@ -77,9 +78,7 @@
                   ItemsSource="{Binding Service}" 
                   Margin="0,25,0,106"
                   Visibility="Hidden"
-                  Cursor="Hand" MouseDoubleClick="LViewServ_MouseDoubleClick" 
-                    
-                  >
+                  Cursor="Hand" MouseDoubleClick="LViewServ_MouseDoubleClick">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
