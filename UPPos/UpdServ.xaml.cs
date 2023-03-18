@@ -25,21 +25,20 @@ namespace UPPos
         public Frame frame1;
         string Log;
         object Item;
+        Service thisService;
         //List<Service> List_Services = new List<Service>() { new Service() };
         List<Service> services = new List<Service>();
-        public UpdServ(string log,Frame frame, object item)
+        public UpdServ(string log,Frame frame,Service service)
         {
             
             InitializeComponent();
             frame1 = frame;
             Log = log;
-              object Item;
-            Item = item;
-
+            thisService = service;
             services = Entities1.GetContex().Service.ToList();
             for (int i = 0; i < services.Count; i++)
             {
-                if (services[i].service1 == Item.GetType().GetProperty("service1").GetValue(Item))
+                if (services[i].service1 == thisService.service1)
                 {
                     NameServUpd.Text = services[i].service1;
                     PriceServUpd.Text = services[i].price.ToString();
@@ -58,7 +57,7 @@ namespace UPPos
             List_Services = Entities1.GetContex().Service.ToList();
             for (int i = 0; i < count; i++)
             {
-                if (List_Services[i].service1 == Item.GetType().GetProperty("service1").GetValue(Item))
+                if (List_Services[i].service1 ==  thisService.service1)
                 {
                     name = List_Services[i].service1;
                     if (double.TryParse(PriceServUpd.Text, out price))

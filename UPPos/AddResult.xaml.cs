@@ -44,12 +44,12 @@ namespace UPPos
         //    set { test = value; }
         //}
 
-        public AddResult(string log, Frame frame, object item)
+        public AddResult(string log, Frame frame)
         {
             DataContext = this;
             frame1 = frame;
             Log = log;
-            Item = item;
+          
             InitializeComponent();
         }
 

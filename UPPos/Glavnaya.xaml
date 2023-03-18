@@ -77,7 +77,8 @@
                   ItemsSource="{Binding Service}" 
                   Margin="0,25,0,106"
                   Visibility="Hidden"
-                  Cursor="Hand" 
+                  Cursor="Hand" MouseDoubleClick="LViewServ_MouseDoubleClick" 
+                    
                   >
 
             <ListView.ItemContainerStyle>

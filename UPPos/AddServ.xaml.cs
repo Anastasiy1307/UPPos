@@ -25,11 +25,11 @@ namespace UPPos
         List<Service> List_Services = new List<Service>() { new Service()};
         List<Workers> workers = new List<Workers>();
         string Log;
-        public AddServ(string log,Frame frame, object item)
+        public AddServ(string log,Frame frame)
         {
             frame1 = frame;
             Log = log; 
-            Item = item;
+         
             InitializeComponent();
         }
 

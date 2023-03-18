@@ -271,19 +271,19 @@ namespace UPPos
         {
             if(LViewResult.Visibility == Visibility.Visible && LViewServ.Visibility == Visibility.Hidden)
             {
-                frame1.Navigate(new AddResult(User, frame1, Item));
+                frame1.Navigate(new AddResult(User, frame1));
             }
             else
             {
-                frame1.Navigate(new AddServ(User, frame1, Item));
+                frame1.Navigate(new AddServ(User, frame1));
             }
            
         }
 
         private void LViewServ_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            object item = LViewServ.SelectedItem;
-            frame1.Navigate(new UpdServ(User, frame1, item));
+            var track = ((ListView)sender).SelectedValue as Service;
+            frame1.Navigate(new UpdServ(User, frame1, track));
         }
         public void LoadServ()
         {
@@ -297,6 +297,11 @@ namespace UPPos
             List_Service = List_Service.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
             LViewServ.ItemsSource = List_Service.OrderBy(p => p.price).ToList();
         }
-        
+
+        private void LViewServ_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var track = ((ListView)sender).SelectedValue as Service;
+            frame1.Navigate(new UpdServ(User, frame1, track));
+        }
     }
 }
