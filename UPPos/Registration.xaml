@@ -25,18 +25,35 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
-                        <Border x:Name="border" CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
-                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        <Border x:Name="border" 
+                                CornerRadius="15" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Focusable="false" 
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            <Trigger Property="IsEnabled" 
+                                     Value="false">
+                                <Setter Property="Opacity" 
+                                        TargetName="border" 
+                                        Value="0.56"/>
                             </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            <Trigger Property="IsMouseOver" 
+                                     Value="true">
+                                <Setter Property="BorderBrush" 
+                                        TargetName="border" 
+                                        Value="{StaticResource TextBox.MouseOver.Border}"/>
                             </Trigger>
-                            <Trigger Property="IsKeyboardFocused" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            <Trigger Property="IsKeyboardFocused" 
+                                     Value="true">
+                                <Setter Property="BorderBrush" 
+                                        TargetName="border" 
+                                        Value="{StaticResource TextBox.Focus.Border}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -45,10 +62,13 @@
             <Style.Triggers>
                 <MultiTrigger>
                     <MultiTrigger.Conditions>
-                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
-                        <Condition Property="IsSelectionActive" Value="false"/>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" 
+                                   Value="true"/>
+                        <Condition Property="IsSelectionActive" 
+                                   Value="false"/>
                     </MultiTrigger.Conditions>
-                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="SelectionBrush" 
+                            Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
@@ -70,18 +90,34 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type PasswordBox}">
-                        <Border x:Name="border" CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
-                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        <Border x:Name="border" CornerRadius="15" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Focusable="false" 
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            <Trigger Property="IsEnabled" 
+                                     Value="false">
+                                <Setter Property="Opacity" 
+                                        TargetName="border" 
+                                        Value="0.56"/>
                             </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border1}"/>
+                            <Trigger Property="IsMouseOver" 
+                                     Value="true">
+                                <Setter Property="BorderBrush" 
+                                        TargetName="border" 
+                                        Value="{StaticResource TextBox.MouseOver.Border1}"/>
                             </Trigger>
-                            <Trigger Property="IsKeyboardFocused" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border1}"/>
+                            <Trigger Property="IsKeyboardFocused" 
+                                     Value="true">
+                                <Setter Property="BorderBrush" 
+                                        TargetName="border" 
+                                        Value="{StaticResource TextBox.Focus.Border1}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -90,16 +126,20 @@
             <Style.Triggers>
                 <MultiTrigger>
                     <MultiTrigger.Conditions>
-                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
-                        <Condition Property="IsSelectionActive" Value="false"/>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" 
+                                   Value="true"/>
+                        <Condition Property="IsSelectionActive" 
+                                   Value="false"/>
                     </MultiTrigger.Conditions>
-                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="SelectionBrush" 
+                            Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
                 </MultiTrigger>
             </Style.Triggers>
         </Style>
     </Page.Resources>
 
-    <Grid Width="1200" Height="700">
+    <Grid Width="1200" 
+          Height="700">
         <TextBox x:Name="login" 
                  Style="{DynamicResource TextBoxStyle1}" 
                  HorizontalAlignment="Center" 
@@ -111,6 +151,7 @@
                  FontSize="40" 
                  VerticalAlignment="Top" 
                  TextAlignment="Center" />
+        
         <TextBox x:Name="password" 
                  Style="{DynamicResource TextBoxStyle1}" 
                  HorizontalAlignment="Center" 
@@ -122,6 +163,7 @@
                  Width="520" 
                  FontFamily="Comic Sans MS"
                  TextAlignment="Center" />
+        
         <TextBlock x:Name="registration" 
                    Text="Зарегистрироваться" 
                    TextDecorations="Underline" 
@@ -135,8 +177,8 @@
                    Margin="0,499,0,135" 
                    FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Regis_MouseLeftButtonDown"
-                   Cursor="Hand" 
-                   />
+                   Cursor="Hand" />
+        
         <TextBlock x:Name="back" 
                    Text="Вернуться назад" 
                    TextDecorations="Underline" 
@@ -151,6 +193,7 @@
                    FontFamily="Comic Sans MS" 
                    MouseLeftButtonDown="Back_MouseLeftButtonDown"
                    Cursor="Hand"/>
+        
         <TextBox x:Name="password_Copy" 
                  Style="{DynamicResource TextBoxStyle1}" 
                  HorizontalAlignment="Center" 
@@ -162,6 +205,7 @@
                  FontFamily="Comic Sans MS"
                  Margin="0,396,0,0" 
                  TextAlignment="Center"/>
+        
         <Label Content="Логин" 
                Margin="0,82,0,0" 
                VerticalAlignment="Top" 
@@ -173,6 +217,7 @@
                FontWeight="Normal" 
                FontStyle="Normal" 
                FontFamily="Comic Sans MS"/>
+        
         <Label Content="Пароль" 
                HorizontalAlignment="Center" 
                Margin="0,207,0,0" 
@@ -184,6 +229,7 @@
                FontWeight="Normal" 
                FontStyle="Normal" 
                FontFamily="Comic Sans MS"/>
+        
         <Label Content="Повторите пароль" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 

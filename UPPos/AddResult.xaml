@@ -76,7 +76,7 @@
                          Width="520" 
                          FontFamily="Comic Sans MS"
                          TextAlignment="Center"/>
-                
+
                 <Label Content="Результат" 
                        HorizontalAlignment="Center"
                        VerticalAlignment="Top" 
@@ -88,13 +88,11 @@
                        FontStyle="Normal" 
                        FontFamily="Comic Sans MS"/>
 
-
                 <ComboBox x:Name="result"
                           FontSize="40" 
                           Height="60" 
                           Width="520" 
                           ItemsSource="{Binding Path=Znak}"/>
-
 
                 <Label Content="Дата предоставления услуги" 
                        HorizontalAlignment="Center" 
@@ -131,6 +129,7 @@
                            FontFamily="Comic Sans MS"
                            Cursor="Hand"
                            MouseLeftButtonDown="AddData_MouseLeftButtonDown"/>
+                
                 <TextBlock x:Name="back" 
                            Text="Вернуться назад" 
                            TextDecorations="Underline" 

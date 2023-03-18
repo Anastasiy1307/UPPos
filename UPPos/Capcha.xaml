@@ -11,6 +11,7 @@
         <Frame NavigationUIVisibility='Hidden' 
                Name="CaptchaFrame" 
                Margin="0,0,0,200"></Frame>
+        
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
                  x:Name="Capch" 
                  TextWrapping="Wrap" 
@@ -19,6 +20,7 @@
                  FontFamily="Comic Sans MS" 
                  Margin="0,28,0,256" 
                  IsEnabled="False"/>
+        
         <Button Style="{DynamicResource ButtonStyle1}" 
                 Content="ОК" 
                 HorizontalAlignment="Center" 
@@ -29,6 +31,7 @@
                 Foreground="White" 
                 Width="144" 
                 Click="Button_Click" />
+        
         <TextBox Style="{DynamicResource TextBoxStyle1}" 
             x:Name="Capcha1" 
             FontSize="40" 

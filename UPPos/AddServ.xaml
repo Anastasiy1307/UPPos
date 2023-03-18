@@ -73,7 +73,5 @@
                    TextDecorations="Underline" 
                    Margin="1044,10,-34,595" 
                    MouseLeftButtonDown="BackSBut_MouseLeftButtonDown"/>
-
-
     </Grid>
 </Page>

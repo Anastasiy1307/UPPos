@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UPPos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200" Background="#DCE0EB" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="700" Width="1200" 
+        Background="#DCE0EB" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame NavigationUIVisibility="Hidden" Name="MainFrame"></Frame>
+        <Frame NavigationUIVisibility="Hidden" 
+               Name="MainFrame"></Frame>
 
     </Grid>
 </Window>
