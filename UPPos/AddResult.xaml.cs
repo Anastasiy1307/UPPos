@@ -60,7 +60,7 @@ namespace UPPos
             int id_w;
             int id_s;
             char r;
-            int count = Entities1.GetContex().Service.Count();
+            int count = Entities1.GetContex().Results.Count();
             DateTime d;
             List_Results[0].id = count + 1;
             if (int.TryParse(id_user.Text, out id_u))

@@ -209,7 +209,7 @@
                   ItemsSource="{Binding Result}" 
                   Margin="0,25,0,105"
                   Visibility="Hidden"
-                  Cursor="Hand">
+                  Cursor="Hand" MouseDoubleClick="LViewResult_MouseDoubleClick">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

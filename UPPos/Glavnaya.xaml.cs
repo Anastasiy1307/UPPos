@@ -302,5 +302,11 @@ namespace UPPos
             var track = ((ListView)sender).SelectedValue as Service;
             frame1.Navigate(new UpdServ(User, frame1, track));
         }
+
+        private void LViewResult_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var track1 = ((ListView)sender).SelectedValue as Results;
+            frame1.Navigate(new UpdResult(User, frame1, track1));
+        }
     }
 }

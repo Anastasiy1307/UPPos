@@ -1,0 +1,23 @@
+﻿<Window x:Class="UPPos.PrintResult"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UPPos"
+        mc:Ignorable="d"
+        Title="PrintResult" Height="700" Width="500">
+    <Grid>
+        <Label Content="МЕД.ЦЕНТР"
+               FontSize="35"
+               Width="200"
+               Height="55" Margin="0,2,300,627"/>
+
+        <TextBlock Text="ООО Ниж.Нов. МЕД.ЦЕНТР 607480 г. Нижний Новгород, 40 лет Победы, д. 10"
+                   Width="200" 
+                   Height="50"
+                   TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        
+       
+
+    </Grid>
+</Window>
