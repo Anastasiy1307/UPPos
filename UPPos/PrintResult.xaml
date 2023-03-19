@@ -9,15 +9,104 @@
     <Grid>
         <Label Content="МЕД.ЦЕНТР"
                FontSize="35"
-               Width="200"
-               Height="55" Margin="0,2,300,627"/>
+               Height="55" 
+               Margin="0,2,268,627" 
+               FontWeight="Bold" />
 
         <TextBlock Text="ООО Ниж.Нов. МЕД.ЦЕНТР 607480 г. Нижний Новгород, 40 лет Победы, д. 10"
                    Width="200" 
                    Height="50"
-                   TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        
-       
+                   TextWrapping="Wrap" 
+                   HorizontalAlignment="Right" 
+                   VerticalAlignment="Top" TextAlignment="Right" Margin="0,2,10,0"/>
+
+        <Label Content="Справка"
+               FontSize="30"
+               Height="50" 
+               Margin="188,161,176,473" FontWeight="Bold"/>
+
+        <Label Content="Заказ №: " 
+               Margin="2,232,400,416"
+               FontSize="20"  
+               RenderTransformOrigin="0.335,0.55" 
+               FontWeight="Bold"/>
+
+        <TextBlock Text="00000"
+                   x:Name="NumSpravki"
+                   FontSize="20" Margin="105,238,325,416" 
+                   RenderTransformOrigin="1.921,7.458"/>
+
+        <Label Content="Выдана:"
+               FontSize="20" 
+               Margin="0,268,407,375" FontWeight="Bold"/>
+
+        <TextBlock Text="___________________________________________________________________________" 
+                   Margin="93,282,22,380"/>
+
+        <TextBlock Text="(Ф.И.О.)"
+                   Height="20"
+                   Width="50" Margin="250,296,200,368" FontStyle="Italic"/>
+
+        <Rectangle HorizontalAlignment="Left" 
+                Height="46" 
+                Stroke="Black" 
+                VerticalAlignment="Center" 
+                Width="204" Margin="46,0,0,0"/>
+        <TextBlock Text="Услуга"
+                   FontSize="20" 
+                   Margin="118,326,322,326" RenderTransformOrigin="1.452,0.702"/>
+        <Rectangle HorizontalAlignment="Left" 
+                Height="46" 
+                Stroke="Black" 
+                VerticalAlignment="Top" 
+                Width="204" Margin="46,365,0,0"/>
+        <TextBlock Name="ServicePrint"
+                   Text="000000" Margin="64,375,268,286"/>
+
+
+
+        <Rectangle HorizontalAlignment="Left" 
+                Height="46" 
+                Stroke="Black" 
+                VerticalAlignment="Center" 
+                Width="198" 
+                   Margin="250,0,0,0"/>
+        <TextBlock Text="Результат"
+                   FontSize="20" 
+                   Margin="304,326,106,326" RenderTransformOrigin="0.612,0.563"/>
+        <Rectangle HorizontalAlignment="Left" 
+                Height="46" 
+                Stroke="Black" 
+                VerticalAlignment="Top" 
+                Width="198" Margin="250,365,0,0"/>
+        <TextBlock Name="ResPrint"
+                   Text="000000" Margin="265,375,67,286"/>
+
+        <Label Content="Врач:"
+               FontSize="20" 
+               Margin="0,429,436,214" FontWeight="Bold" RenderTransformOrigin="0.502,1.528"/>
+        <TextBlock Text="________________________________________________" 
+                   Margin="64,443,176,219"/>
+        <TextBlock Text="(Ф.И.О.)"
+                   Height="20" Margin="170,457,282,207" FontStyle="Italic" RenderTransformOrigin="0.458,0.173"/>
+
+        <TextBlock Text="_________________________" 
+                   Margin="349,443,22,219"/>
+        <TextBlock Text="(Подпись)"
+                   Height="20" Margin="386,457,58,207" FontStyle="Italic"/>
+
+
+        <TextBlock Text="Дата проведения: "
+                   FontSize="20" 
+                   Margin="10,642,318,10" 
+                   RenderTransformOrigin="0.448,0.563"/>
+        <TextBlock Name="DateProv"
+                   FontSize="20"
+                   Text="0000-00-00" Margin="194,644,194,10"/>
+
+
+        <Image Source="/Pictures/ПечатьМед.png" Margin="32,515,368,81" />
+        <Image Source="/Pictures/ПечатьВрача.png" Margin="334,515,34,83" />
 
     </Grid>
 </Window>
