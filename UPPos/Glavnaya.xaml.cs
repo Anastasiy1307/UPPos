@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -15,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using UPPos.Class;
+using Path = System.IO.Path;
 
 namespace UPPos
 {
@@ -36,6 +39,7 @@ namespace UPPos
         List<Users> users = new List<Users>();
         List<Workers> workers = new List<Workers>();
         List<History> historys = new List<History>();
+        List<string> filtr = new List<string>() { "Фильтрация", "До 500 руб." };
         int kolvo_zapice = 3;
         public Glavnaya(string log, Frame frame, object item)
         {
@@ -44,6 +48,16 @@ namespace UPPos
             User = log;
             Workers = log;
             Item = item;
+            var all1 = Entities1.GetContex().Service.ToList();
+            all1.Insert(0, new Service
+            {
+                service1 = "Услуги"
+            });
+            ComboType_Copy.ItemsSource = filtr;
+            var allTypes2 = Entities1.GetContex().Service.ToList();
+            ComboType.ItemsSource = all1;
+            ComboType_Copy.SelectedIndex = 0;
+            ComboType.SelectedIndex = 0;
             int count_hh = Entities1.GetContex().History.Count();
             historys = Entities1.GetContex().History.ToList();
             int time = 0;
@@ -96,14 +110,6 @@ namespace UPPos
             get { return (int)GetValue(TickCounterProperty); }
             set { SetValue(TickCounterProperty, value); }
         }
-
-        private void Glavnaya_Rezultat(object sender, MouseButtonEventArgs e)
-        {
-           
-        }
-
-       
-
 
         public int soxr = 0;
         private void Timer_Tick(object sender, EventArgs e)
@@ -274,7 +280,21 @@ namespace UPPos
         }
         public void LoadServ()
         {
-            Update();
+            var currentService = Entities1.GetContex().Service.ToList();
+            var currentService1 = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewServ.ItemsSource = currentService1.ToList();
+
+            var currentResult = Entities1.GetContex().Results.ToList();
+            for (int i = 0; i < currentResult.Count; i++)
+            {
+                if (currentResult[i].id_user != 1)
+                {
+                    currentResult.RemoveAt(i);
+                    i--;
+                }
+            }
+            currentResult = currentResult.Where(p => p.result.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewResult.ItemsSource = currentResult.ToList();
         }
 
         private void LViewServ_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -289,17 +309,12 @@ namespace UPPos
             frame1.Navigate(new UpdResult(User, frame1, track));
         }
 
-        private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboType_SelectionChangedAsync(object sender, SelectionChangedEventArgs e)
         {
             Update();
         }
 
         private void ComboType_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Update();
-        }
-        //Поиск, сортировка, фильтрация
-        private async void Update()
         {
             var currentService = Entities1.GetContex().Service.ToList();
             if (ComboType_Copy.SelectedIndex == 1)
@@ -313,6 +328,12 @@ namespace UPPos
                     }
                 }
             }
+            currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewServ.ItemsSource = currentService.ToList();
+        }
+        private async void Update()
+        {
+            var currentService = Entities1.GetContex().Service.ToList();
             if (ComboType.SelectedIndex > 0)
             {
                 for (int i = 0; i < currentService.Count; i++)
@@ -327,18 +348,6 @@ namespace UPPos
             }
             currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
             LViewServ.ItemsSource = currentService.ToList();
-
-            var currentResult = Entities1.GetContex().Results.ToList();
-            for (int i = 0; i < currentResult.Count; i++)
-            {
-                if (currentResult[i].id_user!= 1)
-                {
-                    currentResult.RemoveAt(i);
-                    i--;
-                }
-            }
-            currentResult = currentResult.Where(p => p.result.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            LViewResult.ItemsSource = currentResult.ToList();
         }
     }
 }

@@ -72,7 +72,7 @@ namespace UPPos
                         break;
                     }
                 }
-                frame1.Navigate(new Glavnaya(Log, frame1, Item);
+                frame1.Navigate(new Glavnaya(Log, frame1, Item));
             }
             catch
             {
