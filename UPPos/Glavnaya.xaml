@@ -43,7 +43,8 @@
                 <ComboBox Width="271"
                           x:Name="ComboType"
                           DisplayMemberPath="Title"
-                          FontFamily="Comic Sans MS"/>
+                          FontFamily="Comic Sans MS" SelectionChanged="ComboType_SelectionChanged"
+                          />
                 <TextBlock Text="Фильтрация: "
                            Foreground="White"
                            Width="132"
@@ -54,7 +55,7 @@
                            VerticalAlignment="Center"/>
                 <ComboBox Width="251"
                     x:Name="ComboType_Copy"
-                    DisplayMemberPath="Title"/>
+                    DisplayMemberPath="Title" SelectionChanged="ComboType_Copy_SelectionChanged"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">

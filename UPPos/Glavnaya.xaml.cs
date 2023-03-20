@@ -274,22 +274,7 @@ namespace UPPos
         }
         public void LoadServ()
         {
-            var currentService = Entities1.GetContex().Service.ToList();
-
-            currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            LViewServ.ItemsSource = currentService.ToList();
-
-            var currentResult = Entities1.GetContex().Results.ToList();
-            for (int i = 0; i < currentResult.Count; i++)
-            {
-                if (currentResult[i].id_user.ToString() != User)
-                {
-                    currentResult.RemoveAt(i);
-                    i--;
-                }
-            }
-            currentResult = currentResult.Where(p => p.result.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            LViewResult.ItemsSource = currentResult.ToList();
+            Update();
         }
 
         private void LViewServ_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -302,6 +287,58 @@ namespace UPPos
         {
             var track = ((ListView)sender).SelectedValue as Results;
             frame1.Navigate(new UpdResult(User, frame1, track));
+        }
+
+        private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Update();
+        }
+
+        private void ComboType_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Update();
+        }
+        //Поиск, сортировка, фильтрация
+        private async void Update()
+        {
+            var currentService = Entities1.GetContex().Service.ToList();
+            if (ComboType_Copy.SelectedIndex == 1)
+            {
+                for (int i = 0; i < currentService.Count; i++)
+                {
+                    if (currentService[i].price > 500)
+                    {
+                        currentService.RemoveAt(i);
+                        i--;
+                    }
+                }
+            }
+            if (ComboType.SelectedIndex > 0)
+            {
+                for (int i = 0; i < currentService.Count; i++)
+                {
+                    await Task.Delay(100);
+                    if (currentService[i].service1 != ComboType.Text)
+                    {
+                        currentService.RemoveAt(i);
+                        i--;
+                    }
+                }
+            }
+            currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewServ.ItemsSource = currentService.ToList();
+
+            var currentResult = Entities1.GetContex().Results.ToList();
+            for (int i = 0; i < currentResult.Count; i++)
+            {
+                if (currentResult[i].id_user!= 1)
+                {
+                    currentResult.RemoveAt(i);
+                    i--;
+                }
+            }
+            currentResult = currentResult.Where(p => p.result.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewResult.ItemsSource = currentResult.ToList();
         }
     }
 }

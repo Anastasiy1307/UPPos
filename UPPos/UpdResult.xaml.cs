@@ -57,6 +57,28 @@ namespace UPPos
                 }
             }
         }
+        private void Result_Delete(object sender, RoutedEventArgs e)
+        {
+            List<Results> results = new List<Results> { };
+            results = Entities1.GetContex().Results.ToList();
+            try
+            {
+                for (int i = 0; i < results.Count; i++)
+                {
+                    if (results[i].result == Item.GetType().GetProperty("result1").GetValue(Item))
+                    {
+                        Entities1.GetContex().Results.Remove(results[i]);
+                        Entities1.GetContex().SaveChanges();
+                        break;
+                    }
+                }
+                frame1.Navigate(new Glavnaya(Log, frame1, Item);
+            }
+            catch
+            {
+                MessageBox.Show("Вы не можете удалить данный анализ, пока не будет удален результат");
+            }
+        }
         private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             frame1.Navigate(new Glavnaya(Log, frame1, Item));

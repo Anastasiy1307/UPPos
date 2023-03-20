@@ -89,6 +89,7 @@
                    HorizontalAlignment="Left" 
                    Width="238" 
                    Height="92" 
+                   MouseLeftButtonDown="Zapis_Delete"
                    VerticalAlignment="Top"/>
 
         <TextBlock x:Name="BackSBut"

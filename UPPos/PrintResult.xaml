@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UPPos"
         mc:Ignorable="d"
-        Title="PrintResult" Height="700" Width="500">
+        Title="PrintResult" Height="820" Width="610">
     <Grid>
         <Label Content="МЕД.ЦЕНТР"
                FontSize="35"
                Height="55" 
-               Margin="0,2,268,627" 
-               FontWeight="Bold" />
+               Margin="0,4,266,0" 
+               FontWeight="Bold" HorizontalAlignment="Right" Width="332" VerticalAlignment="Top" />
 
         <TextBlock Text="ООО Петраград МЕД.ЦЕНТР 607480 г. Санкт-Петербург, ул. Гончарная, д. 36"
                    Width="200" 
@@ -23,35 +23,34 @@
                    Margin="0,2,10,0"/>
 
         <Label Content="Справка"
-               FontSize="30"
-               Height="50" 
-               Margin="188,161,176,473" 
-               FontWeight="Bold"/>
+               FontSize="30" 
+               Margin="0,202,275,0" 
+               FontWeight="Bold" HorizontalAlignment="Right" Width="137" Height="51" VerticalAlignment="Top"/>
 
         <Label Content="Заказ №: " 
-               Margin="2,232,400,416"
+               Margin="0,232,499,0"
                FontSize="20"  
                RenderTransformOrigin="0.335,0.55" 
-               FontWeight="Bold"/>
+               FontWeight="Bold" HorizontalAlignment="Right" Width="99" Height="36" VerticalAlignment="Top"/>
 
         <TextBlock Text="00000"
                    x:Name="NumSpravki"
                    FontSize="20" 
-                   Margin="105,238,325,416" 
-                   RenderTransformOrigin="1.921,7.458"/>
+                   Margin="0,0,356,516" 
+                   RenderTransformOrigin="1.921,7.458" HorizontalAlignment="Right" Width="139" Height="30" VerticalAlignment="Bottom"/>
 
         <Label Content="Выдана:"
                FontSize="20" 
-               Margin="0,268,407,375" 
-               FontWeight="Bold"/>
+               Margin="0,268,503,0" 
+               FontWeight="Bold" HorizontalAlignment="Right" Width="97" Height="43" VerticalAlignment="Top"/>
 
         <TextBlock Text="___________________________________________________________________________" 
-                   Margin="93,282,22,380"/>
+                   Margin="93,0,0,481" HorizontalAlignment="Left" Width="391" Height="21" VerticalAlignment="Bottom"/>
 
         <TextBlock Text="(Ф.И.О.)"
                    Height="20"
                    Width="50" 
-                   Margin="250,296,200,368" 
+                   Margin="250,205,200,368" 
                    FontStyle="Italic"/>
 
         <Rectangle HorizontalAlignment="Left" 
@@ -62,15 +61,15 @@
                    Margin="46,0,0,0"/>
         <TextBlock Text="Услуга"
                    FontSize="20" 
-                   Margin="118,326,322,326" 
+                   Margin="118,326,416,420" 
                    RenderTransformOrigin="1.452,0.702"/>
         <Rectangle HorizontalAlignment="Left" 
                 Height="46" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
-                Width="204" Margin="46,365,0,0"/>
+                Width="204" Margin="46,323,0,0"/>
         <TextBlock Name="ServicePrint"
-                   Text="000000" Margin="64,375,268,286"/>
+                   Text="000000" Margin="68,0,0,0" RenderTransformOrigin="0.49,0.513" Height="36" VerticalAlignment="Center" HorizontalAlignment="Left" Width="160"/>
 
 
 
@@ -82,52 +81,52 @@
                    Margin="250,0,0,0"/>
         <TextBlock Text="Результат"
                    FontSize="20" 
-                   Margin="304,326,106,326" 
+                   Margin="290,319,150,431" 
                    RenderTransformOrigin="0.612,0.563"/>
         <Rectangle HorizontalAlignment="Left" 
                 Height="46" 
                 Stroke="Black" 
                 VerticalAlignment="Top" 
-                Width="198" Margin="250,365,0,0"/>
+                Width="198" Margin="250,323,0,0"/>
         <TextBlock Name="ResPrint"
                    Text="000000" 
-                   Margin="265,375,67,286"/>
+                   Margin="0,380,172,0" HorizontalAlignment="Right" Width="158" Height="29" VerticalAlignment="Top"/>
 
         <Label Content="Врач:"
                FontSize="20" 
-               Margin="0,429,436,214" 
+               Margin="0,458,0,0" 
                FontWeight="Bold" 
-               RenderTransformOrigin="0.502,1.528"/>
+               RenderTransformOrigin="0.502,1.528" HorizontalAlignment="Left" Width="164" Height="47" VerticalAlignment="Top"/>
         <TextBlock Text="________________________________________________" 
-                   Margin="64,443,176,219"/>
+                   Margin="0,472,321,0" HorizontalAlignment="Right" Width="211" Height="19" VerticalAlignment="Top"/>
         <TextBlock Text="(Ф.И.О.)"
                    Height="20" 
-                   Margin="170,457,282,207" 
+                   Margin="136,492,0,0" 
                    FontStyle="Italic" 
-                   RenderTransformOrigin="0.458,0.173"/>
+                   RenderTransformOrigin="0.458,0.173" HorizontalAlignment="Left" Width="78" VerticalAlignment="Top"/>
 
         <TextBlock Text="_________________________" 
-                   Margin="349,443,22,219"/>
+                   Margin="0,0,82,282" RenderTransformOrigin="0.546,0.291" HorizontalAlignment="Right" Width="140" Height="27" VerticalAlignment="Bottom"/>
         <TextBlock Text="(Подпись)"
                    Height="20" 
-                   Margin="386,457,58,207" 
-                   FontStyle="Italic"/>
+                   Margin="0,502,116,0" 
+                   FontStyle="Italic" HorizontalAlignment="Right" Width="72" VerticalAlignment="Top"/>
 
 
         <TextBlock Text="Дата проведения: "
                    FontSize="20" 
-                   Margin="10,642,318,10" 
-                   RenderTransformOrigin="0.448,0.563"/>
+                   Margin="10,0,0,10" 
+                   RenderTransformOrigin="0.448,0.563" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="174"/>
         <TextBlock Name="DateProv"
                    FontSize="20"
                    Text="0000-00-00" 
-                   Margin="194,644,194,10"/>
+                   Margin="198,0,0,19" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="176"/>
 
 
         <Image Source="/Pictures/ПечатьМед.png" 
-               Margin="32,515,368,81" />
+               Margin="32,0,0,51" HorizontalAlignment="Left" Width="138" Height="134" VerticalAlignment="Bottom" />
         <Image Source="/Pictures/ПечатьВрача.png" 
-               Margin="334,515,34,83" />
+               Margin="338,606,0,0" Height="124" VerticalAlignment="Top" HorizontalAlignment="Left" Width="179" />
 
     </Grid>
 </Window>

@@ -242,6 +242,7 @@
                            FontWeight="Bold" 
                            Foreground="#7AA7D2" 
                            FontSize="50" 
+                           MouseLeftButtonDown="Result_Delete"
                            FontFamily="Comic Sans MS"
                            Cursor="Hand"/>
                 </StackPanel>
