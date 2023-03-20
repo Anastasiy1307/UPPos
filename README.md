@@ -19,3 +19,5 @@
 ![image](https://user-images.githubusercontent.com/100847962/222902065-821c3e62-618d-435a-8ad6-8403a8df2628.png)
 # Отчет 2 день!
 [_43._._2.docx](https://github.com/Anastasiy1307/UPPos/files/10930604/_43._._2.docx)
+Отчёт 01.01
+[Otchyot_UP_2023_01_01.docx](https://github.com/Anastasiy1307/UPPos/files/11017473/Otchyot_UP_2023_01_01.docx)
