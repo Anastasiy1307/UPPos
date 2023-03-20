@@ -40,12 +40,13 @@ namespace UPPos
             InitializeComponent();
             DataContext = this;
             frame1 = frame;
+            thisResults = result;
             Log = log;
             results = Entities1.GetContex().Results.ToList();
-            int count = Entities1.GetContex().Results.Count();
-            for (int i = 0; i < count; i++)
+           
+            for (int i = 0; i < results.Count; i++)
             {
-                if (results[i].id == thisResults.id)
+                if (results[i].result == thisResults.result)
                 {
                     id_userUpd.Text = results[i].id_user.ToString();
                     id_workUpd.Text = results[i].id_work.ToString();
@@ -70,7 +71,7 @@ namespace UPPos
             int count = Entities1.GetContex().Results.Count();
             List_Results = Entities1.GetContex().Results.ToList();
             DateTime d;
-            List_Results[0].id = count + 1;
+           // List_Results[0].id = count + 1;
             if (int.TryParse(id_userUpd.Text, out id_u))
             {
                 if (int.TryParse(id_workUpd.Text, out id_w))
@@ -129,6 +130,12 @@ namespace UPPos
         {
             PrintRes.Visibility = Visibility.Collapsed;
             D.Visibility = Visibility.Visible;
+        }
+
+        private void PrintRes_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            PrintResult result = new PrintResult();
+            result.Show();
         }
     }
 }

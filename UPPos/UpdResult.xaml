@@ -249,7 +249,7 @@
                        x:Name="PrintRes"
                        Visibility="Collapsed"
                        Height="100"
-                       Width="100"/>
+                       Width="100" MouseLeftButtonDown="PrintRes_MouseLeftButtonDown"/>
 
                 <TextBlock x:Name="back" 
                            Text="Вернуться назад" 
