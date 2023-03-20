@@ -279,22 +279,17 @@ namespace UPPos
             currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
             LViewServ.ItemsSource = currentService.ToList();
 
-            //var currentResult = Entities1.GetContex().Results.ToList();
-
-            //for (int i = 0; i < currentResult.Count; i++)
-            //{
-            //    if (currentResult[i].login != user)
-            //    {
-            //        currentResult.RemoveAt(i);
-            //        i--;
-            //    }
-            //}
-            //currentResult = currentResult.Where(p => p.result1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            //LViewResult.ItemsSource = currentResult.ToList();
-            //
-            //List_Service = Entities1.GetContex().Service.ToList();
-            //List_Service = List_Service.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
-            //LViewServ.ItemsSource = List_Service.OrderBy(p => p.price).ToList();
+            var currentResult = Entities1.GetContex().Results.ToList();
+            for (int i = 0; i < currentResult.Count; i++)
+            {
+                if (currentResult[i].id_user.ToString() != User)
+                {
+                    currentResult.RemoveAt(i);
+                    i--;
+                }
+            }
+            currentResult = currentResult.Where(p => p.result.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            LViewResult.ItemsSource = currentResult.ToList();
         }
 
         private void LViewServ_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -305,8 +300,8 @@ namespace UPPos
 
         private void LViewResult_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var track1 = ((ListView)sender).SelectedValue as Results;
-            frame1.Navigate(new UpdResult(User, frame1, track1));
+            var track = ((ListView)sender).SelectedValue as Results;
+            frame1.Navigate(new UpdResult(User, frame1, track));
         }
     }
 }

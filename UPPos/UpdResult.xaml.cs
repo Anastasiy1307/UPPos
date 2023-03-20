@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace UPPos
 {
@@ -24,7 +25,8 @@ namespace UPPos
     {
         public Frame frame1;
         object Item;
-        List<Results> List_Results = new List<Results>() { new Results() };
+        Results thisResults;
+        List<Results> results = new List<Results>();
         List<Workers> workers = new List<Workers>();
         private List<char> znak = new List<char>() { '+', '-' };
         public List<char> Znak
@@ -33,13 +35,26 @@ namespace UPPos
             set { znak = value; }
         }
         string Log;
-        public UpdResult(string log, Frame frame, object item)
+        public UpdResult(string log, Frame frame, Results result)
         {
+            InitializeComponent();
             DataContext = this;
             frame1 = frame;
             Log = log;
-            Item = item;
-            InitializeComponent();
+            results = Entities1.GetContex().Results.ToList();
+            int count = Entities1.GetContex().Results.Count();
+            for (int i = 0; i < count; i++)
+            {
+                if (results[i].id == thisResults.id)
+                {
+                    id_userUpd.Text = results[i].id_user.ToString();
+                    id_workUpd.Text = results[i].id_work.ToString();
+                    id_serviceUpd.Text = results[i].id_service.ToString();
+                    resultUpd.Text = results[i].result.ToString();
+                    dataUpd.Text = results[i].data.ToString();
+                    break;
+                }
+            }
         }
         private void BackSBut_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -47,22 +62,24 @@ namespace UPPos
         }
         private void UpdData_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            List<Results> List_Results = new List<Results>();
             int id_u;
             int id_w;
             int id_s;
             char r;
             int count = Entities1.GetContex().Results.Count();
+            List_Results = Entities1.GetContex().Results.ToList();
             DateTime d;
             List_Results[0].id = count + 1;
-            if (int.TryParse(id_user.Text, out id_u))
+            if (int.TryParse(id_userUpd.Text, out id_u))
             {
-                if (int.TryParse(id_work.Text, out id_w))
+                if (int.TryParse(id_workUpd.Text, out id_w))
                 {
-                    if (int.TryParse(id_service.Text, out id_s))
+                    if (int.TryParse(id_serviceUpd.Text, out id_s))
                     {
-                        if (char.TryParse(result.Text, out r))
+                        if (char.TryParse(resultUpd.Text, out r))
                         {
-                            if (DateTime.TryParse(data.Text, out d))
+                            if (DateTime.TryParse(dataUpd.Text, out d))
                             {
                                 List_Results[0].id_user = id_u;
                                 List_Results[0].id_work = id_w;

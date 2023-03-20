@@ -112,7 +112,7 @@
                        FontStyle="Normal" 
                        FontFamily="Comic Sans MS"/>
 
-                <TextBox x:Name="id_user" 
+                <TextBox x:Name="id_userUpd" 
                          Style="{DynamicResource TextBoxStyle1}" 
                          HorizontalAlignment="Center"
                          TextWrapping="Wrap" 
@@ -134,7 +134,7 @@
                        FontStyle="Normal" 
                        FontFamily="Comic Sans MS"/>
 
-                <TextBox x:Name="id_work" 
+                <TextBox x:Name="id_workUpd" 
                          Style="{DynamicResource TextBoxStyle1}" 
                          HorizontalAlignment="Center"
                          FontSize="40" 
@@ -156,7 +156,7 @@
                        FontStyle="Normal" 
                        FontFamily="Comic Sans MS" />
 
-                <TextBox x:Name="id_service" 
+                <TextBox x:Name="id_serviceUpd" 
                          Style="{DynamicResource TextBoxStyle1}" 
                          HorizontalAlignment="Center"
                          FontSize="40" 
@@ -179,7 +179,7 @@
                        FontFamily="Comic Sans MS"/>
 
 
-                <ComboBox x:Name="result"
+                <ComboBox x:Name="resultUpd"
                           FontSize="40" 
                           Height="60" 
                           Width="520" 
@@ -197,7 +197,7 @@
                        FontStyle="Normal" 
                        FontFamily="Comic Sans MS" />
 
-                <TextBox x:Name="data" 
+                <TextBox x:Name="dataUpd" 
                          Style="{DynamicResource TextBoxStyle1}" 
                          HorizontalAlignment="Center"
                          FontSize="40" 

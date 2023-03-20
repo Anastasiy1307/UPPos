@@ -26,7 +26,6 @@ namespace UPPos
         string Log;
         object Item;
         Service thisService;
-        //List<Service> List_Services = new List<Service>() { new Service() };
         List<Service> services = new List<Service>();
         public UpdServ(string log,Frame frame,Service service)
         {
